@@ -5,7 +5,8 @@
 
 ---
 
-## 👨‍💻 Student Information
+## Student Information
+
 | Detail | Information |
 | :--- | :--- |
 | **Name** | **Srijato Das** |
@@ -41,5 +42,5 @@
 
 <p align="center">
   <b>System Documentation</b><br>
-  <i>This portal is hosted via GitHub Pages. Content is updated in real-time upon commit.</i>
+  <i>This portal is maintained by Srijato Das. It is hosted via GitHub Pages. Content is updated in real-time upon commit.</i>
 </p>
