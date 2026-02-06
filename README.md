@@ -1,4 +1,4 @@
-# 🚢 Containerization & DevOps Portfolio
+# Containerization & DevOps Portfolio
 > **School of Computer Science | Academic Year 2025-26**
 
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) ![GitHub Pages](https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white) ![Bash](https://img.shields.io/badge/bash-%234EAA25.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
@@ -16,7 +16,7 @@
 
 ---
 
-## 📔 Theory: Classroom Practicals
+## Theory: Classroom Practicals
 *Log of practical exercises and demonstrations conducted during theory sessions.*
 
 | No. | Date | Topic | Brief Summary | Documentation |
@@ -27,7 +27,7 @@
 
 ---
 
-## 🧪 Lab: Laboratory Experiments
+## Lab: Laboratory Experiments
 *Official record of hands-on experiments performed in the laboratory.*
 
 | No. | Date | Experiment Title | Brief Summary | Documentation |
