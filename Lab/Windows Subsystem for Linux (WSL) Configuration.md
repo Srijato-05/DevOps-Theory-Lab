@@ -1,7 +1,3 @@
----
-title: "Lab Report: Windows Subsystem for Linux (WSL) Configuration"
----
-
 # Lab Report: Windows Subsystem for Linux (WSL) Configuration
 
 **Date:** February 9, 2026
