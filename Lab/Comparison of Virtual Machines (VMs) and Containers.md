@@ -1,7 +1,3 @@
----
-title: "Lab Report: Comparison of Virtual Machines (VMs) and Containers"
----
-
 # Lab Report: Comparison of Virtual Machines (VMs) and Containers
 
 **Date:** February 10, 2026
