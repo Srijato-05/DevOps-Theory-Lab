@@ -41,7 +41,7 @@ Establish a functional Linux development environment on Windows using WSL2 and i
 - Installing and configuring Git for version control
 - Understanding Windows-Linux interoperability
 
-[View Experiment 0](./Lab/Experiment%200_%20Windows%20Subsystem%20for%20Linux%20(WSL)%20Configuration.md)
+[View Experiment 0](./Lab/Experiment_0-Windows_Subsystem_for_Linux(WSL)_Configuration.md)
 
 ---
 
@@ -69,7 +69,7 @@ Practical comparison of traditional virtual machines using VirtualBox/Vagrant wi
 
 Containers demonstrated significant advantages in startup time and resource consumption, making them ideal for microservices and rapid deployment scenarios.
 
-[View Experiment 1](./Lab/Experiment%201_%20Comparison%20of%20Virtual%20Machines%20(VMs)%20and%20Containers.md)
+[View Experiment 1](./Lab/Experiment_1-Comparison_of_Virtual_Machines(VMs)_and_Containers.md)
 
 ---
 
@@ -88,7 +88,7 @@ Master fundamental Docker operations through hands-on image management and conta
 
 This experiment provides the foundation for understanding Docker operations and prepares students for more advanced container management techniques.
 
-[View Experiment 2](./Lab/Experiment%202_Docker%20Basic%20Operations.md)
+[View Experiment 2](./Lab/Experiment_2-Docker_Basic_Operations.md)
 
 ---
 
@@ -116,7 +116,7 @@ Alpine Linux provides a 85-90% reduction in image size compared to Ubuntu-based 
 - Understanding package management differences (apt vs apk)
 - Evaluating security surface and vulnerability considerations
 
-[View Experiment 3](./Lab/Experiment%203_%20Deploying%20NGINX%20Using%20Different%20Base%20Images%20and%20Comparing%20Image%20Layers.md)
+[View Experiment 3](./Lab/Experiment_3-Deploying_NGINX_Using_Different_Base_Images_and_Comparing_Image_Layers.md)
 
 ---
 
@@ -126,7 +126,7 @@ Alpine Linux provides a 85-90% reduction in image size compared to Ubuntu-based 
 
 This experiment will cover advanced Docker concepts including multi-stage builds, Docker Compose for orchestration, container security practices, and production-ready configurations.
 
-[View Experiment 4](./Lab/Experiment%204_Docker%20Essentials.md)
+[View Experiment 4](./Lab/Experiment_4-Docker_Essentials.md)
 
 ---
 
