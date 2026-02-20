@@ -21,9 +21,16 @@ UPES | School of Computer Science | Academic Year 2025-26
 
 ## About This Portfolio
 
-This portfolio documents comprehensive hands-on experience with containerization technologies and DevOps practices. Through carefully designed laboratory experiments, this course provides deep understanding of Docker, container orchestration, image optimization, and modern cloud-native development workflows.
+This portfolio documents comprehensive hands-on experience with containerization technologies and DevOps practices. Through carefully designed laboratory experiments, students progress from foundational Linux concepts to advanced Docker optimization techniques.
 
-The curriculum progresses from foundational concepts to advanced optimization techniques, with each experiment building upon previous knowledge. All work has been completed to professional standards with detailed documentation, performance analysis, and real-world application insights.
+The curriculum emphasizes practical implementation over theory, with each experiment building upon previous knowledge to create a cohesive learning experience. All work maintains professional documentation standards with detailed analysis, visual evidence, and real-world applications.
+
+**What Makes This Portfolio Unique:**
+- Hands-on experimentation with real DevOps tools
+- Performance-based analysis and comparisons
+- Professional documentation with visual evidence
+- Progressive complexity from setup to optimization
+- Focus on WSL2 development environments
 
 ---
 
@@ -31,15 +38,19 @@ The curriculum progresses from foundational concepts to advanced optimization te
 
 ### Experiment 0: Windows Subsystem for Linux Configuration
 
-**January 24, 2026**
+**January 24, 2026 | Status: Complete**
 
-Establish a functional Linux development environment on Windows using WSL2 and install Git for version control. This foundational experiment sets up the development environment required for all subsequent experiments.
+Establish a Linux development environment within Windows using WSL2. This foundational experiment prepares the system for all subsequent containerization work and introduces essential command-line tools.
 
-**What You'll Learn:**
-- Installing and configuring WSL2 on Windows
-- Setting up Ubuntu distribution within WSL
-- Installing and configuring Git for version control
-- Understanding Windows-Linux interoperability
+**Learning Focus:**
+- WSL2 installation and resource configuration
+- Ubuntu distribution management
+- Git version control setup
+- Windows-Linux file system interaction
+- Development workflow optimization
+
+**Key Outcomes:**
+WSL2 properly configured with adequate resources, Ubuntu fully functional, and Git ready for repository management. Foundation established for all future experiments.
 
 [View Experiment 0](./Lab/Experiment_0-Windows_Subsystem_for_Linux(WSL)_Configuration.md)
 
@@ -47,27 +58,28 @@ Establish a functional Linux development environment on Windows using WSL2 and i
 
 ### Experiment 1: Comparison of Virtual Machines and Containers
 
-**January 24, 2026** 
+**January 24, 2026 | Status: Complete**
 
-Practical comparison of traditional virtual machines using VirtualBox/Vagrant with modern containerization using Docker. This experiment demonstrates performance differences and helps determine appropriate use cases for each technology.
+Compare traditional virtualization (VirtualBox/Vagrant) with containerization (Docker) through hands-on deployment and performance measurement. This experiment demonstrates why containers have become the industry standard for microservices.
 
-**Key Topics:**
-- Deploying virtual machines with Vagrant and VirtualBox
-- Deploying containers with Docker
-- Analyzing performance metrics: boot time, memory usage, CPU overhead
-- Comparing resource efficiency and deployment speed
-- Understanding isolation levels and security trade-offs
+**Core Comparison Metrics:**
 
-**Results Summary:**
+| Metric | Virtual Machines | Containers | Winner |
+|--------|-----------------|-----------|--------|
+| Boot Time | 30-60 seconds | <1 second | Containers |
+| Memory (Idle) | 512MB - 1GB | 5-15MB | Containers |
+| Memory (Running) | 800MB - 1.2GB | 25-50MB | Containers |
+| Disk Space | 2-3GB per VM | 100-300MB per image | Containers |
+| Deployment Speed | Minutes | Seconds | Containers |
 
-| Metric | Virtual Machines | Containers |
-|--------|-----------------|-----------|
-| Boot Time | 30-60 seconds | <1 second |
-| Memory (Idle) | 512MB - 1GB | 5-15MB |
-| Memory (Running) | 800MB - 1.2GB | 25-50MB |
-| Disk Space | 2-3GB per VM | 100-300MB per image |
+**Key Findings:**
+Containers demonstrate 50-100x memory efficiency advantage compared to full virtual machines. This dramatic difference explains container adoption in cloud-native architectures, microservices, and CI/CD pipelines.
 
-Containers demonstrated significant advantages in startup time and resource consumption, making them ideal for microservices and rapid deployment scenarios.
+**Technical Understanding:**
+- Hypervisor-based vs. container-based virtualization
+- Resource isolation at different layers
+- Trade-offs between isolation levels and efficiency
+- Real-world use case suitability
 
 [View Experiment 1](./Lab/Experiment_1-Comparison_of_Virtual_Machines(VMs)_and_Containers.md)
 
@@ -75,18 +87,24 @@ Containers demonstrated significant advantages in startup time and resource cons
 
 ### Experiment 2: Docker Installation, Configuration, and Running Images
 
-**January 31, 2026**
+**January 31, 2026 | Status: Complete**
 
-Master fundamental Docker operations through hands-on image management and container lifecycle procedures. This experiment covers essential skills for working with Docker in development and production environments.
+Master fundamental Docker operations through practical image management and container lifecycle procedures. This experiment establishes core Docker competency required for advanced techniques.
 
-**Practical Activities:**
-- Pulling images from Docker Hub
-- Running containers with port mapping
-- Verifying container status and connectivity
-- Managing container lifecycle (start, stop, remove)
-- Cleaning up unused images and containers
+**Practical Skills Developed:**
 
-This experiment provides the foundation for understanding Docker operations and prepares students for more advanced container management techniques.
+- Image pulling from Docker Hub registries
+- Container deployment with port mapping
+- Container status verification and networking
+- Container lifecycle management (create, start, stop, remove)
+- Cleanup and resource management
+- Basic troubleshooting
+
+**Experiment Structure:**
+The hands-on approach focuses on understanding Docker CLI commands and their practical application. Students execute real-world scenarios and verify expected outputs, building muscle memory for container operations.
+
+**Progression Path:**
+This experiment provides essential foundation for Experiment 3's image optimization work and prepares students for multi-container orchestration in advanced experiments.
 
 [View Experiment 2](./Lab/Experiment_2-Docker_Basic_Operations.md)
 
@@ -94,27 +112,31 @@ This experiment provides the foundation for understanding Docker operations and 
 
 ### Experiment 3: Deploying NGINX Using Different Base Images
 
-**February 7, 2026**
+**February 7, 2026 | Status: Complete**
 
-Advanced analysis of Docker images using different base operating systems. This experiment compares the Official NGINX image, Ubuntu-based custom images, and Alpine Linux-based optimized images, examining performance, security, and size trade-offs.
+Analyze Docker image optimization through comparison of different base operating systems. This advanced experiment examines the trade-offs between functionality, size, and performance.
 
-**Image Comparison Analysis:**
+**Image Size Comparison:**
 
-| Base Image | Size | Startup Time | Memory | Use Case |
-|-----------|------|--------------|--------|----------|
-| Official (Debian) | 187 MB | ~1 second | 12 MB | Production deployments |
-| Ubuntu | 320 MB | ~2 seconds | 18 MB | Development environments |
-| Alpine | 28 MB | ~0.5 seconds | 4 MB | Edge and lightweight applications |
+| Base Image | Size | Startup | Memory | Best For |
+|-----------|------|---------|--------|----------|
+| Official (Debian) | 187 MB | ~1s | 12 MB | Production |
+| Ubuntu | 320 MB | ~2s | 18 MB | Development |
+| Alpine | 28 MB | ~0.5s | 4 MB | Edge/Lightweight |
 
-**Key Insights:**
+**Critical Insights:**
 
-Alpine Linux provides a 85-90% reduction in image size compared to Ubuntu-based images while maintaining full functionality. Official NGINX images offer the best balance of optimization and maintainability for production use. The experiment demonstrates that image selection significantly impacts deployment efficiency, particularly in resource-constrained environments.
+Alpine Linux achieves 85-90% size reduction compared to Ubuntu while maintaining full NGINX functionality. This dramatic difference directly impacts:
+- Deployment speed (faster pulls and transfers)
+- Container registry storage costs
+- Resource-constrained environments
+- Security surface area
 
-**Technical Deep Dive:**
-- Creating Dockerfiles with different base images
-- Analyzing image layers and their impact on size
-- Understanding package management differences (apt vs apk)
-- Evaluating security surface and vulnerability considerations
+**Technical Depth:**
+Students learn to create Dockerfiles from scratch, analyze multi-layer image structure, understand package manager differences (apt vs apk), and evaluate security implications of base image selection.
+
+**Real-World Application:**
+Image optimization is critical in production environments where thousands of container instances deploy across distributed systems. Size reduction translates directly to infrastructure cost savings and improved deployment velocity.
 
 [View Experiment 3](./Lab/Experiment_3-Deploying_NGINX_Using_Different_Base_Images_and_Comparing_Image_Layers.md)
 
@@ -124,110 +146,76 @@ Alpine Linux provides a 85-90% reduction in image size compared to Ubuntu-based 
 
 **Status: Planned**
 
-This experiment will cover advanced Docker concepts including multi-stage builds, Docker Compose for orchestration, container security practices, and production-ready configurations.
+Advanced Docker concepts including multi-stage builds, Docker Compose orchestration, security scanning, and production-ready configurations.
+
+**Topics to Explore:**
+- Multi-stage builds for image optimization
+- Docker Compose for application stacks
+- Container networking architectures
+- Volume and data persistence patterns
+- Security best practices and scanning
+- Performance optimization techniques
+- Logging and monitoring strategies
 
 [View Experiment 4](./Lab/Experiment_4-Docker_Essentials.md)
 
 ---
 
-## Classroom Theory Sessions
+## Technology Stack & Tools
 
-Foundational concepts and theoretical knowledge covered during classroom sessions provide context for practical experiments. Theory sessions cover:
-
-- Virtualization architecture and evolution
-- Docker ecosystem and core concepts
-- Container networking and communication patterns
-- Data persistence and volume management
-- Dockerfile optimization techniques
-- Docker API and programmatic access
-- Security best practices and image scanning
-- Advanced container management strategies
-
----
-
-## Technology Stack
-
-| Category | Technologies |
-| :--- | :--- |
-| Containerization | Docker, Docker Compose |
-| Operating Systems | Windows 11, WSL2, Ubuntu 22.04, Alpine Linux |
-| Cloud-Native Tools | Docker Hub, Kubernetes (planned) |
-| Infrastructure | VirtualBox, Vagrant |
-| Development Tools | Git, GitHub, VS Code |
-| Scripting | Bash, PowerShell |
-| Web Servers | NGINX, Apache |
-| Configuration | Dockerfile, Docker Compose YAML, Linux Commands |
+| Category | Technologies | Purpose |
+| :--- | :--- | :--- |
+| **Containerization** | Docker, Docker Compose | Application packaging and orchestration |
+| **Operating Systems** | Windows 11, WSL2, Ubuntu 22.04, Alpine | Development and container base images |
+| **Cloud Infrastructure** | Docker Hub, AWS (planned) | Image registry and cloud deployment |
+| **Virtualization** | VirtualBox, Vagrant | VM comparison and testing |
+| **Version Control** | Git, GitHub | Code and documentation management |
+| **Scripting & CLI** | Bash, PowerShell | Automation and command execution |
+| **Web Services** | NGINX, Apache | Web server containerization examples |
+| **Configuration** | Dockerfile, YAML | Infrastructure as code |
 
 ---
 
-## Course Structure
+## Classroom Theory Integration
 
-The curriculum is organized as a progressive learning path, with each experiment building upon previous knowledge and introducing new concepts and tools.
+Theory sessions complement practical experiments by providing conceptual foundation:
 
-**Foundation Phase** focuses on environment setup and understanding core concepts. Students establish their development environment, learn basic Docker operations, and understand the fundamental differences between virtualization approaches.
+**Session Topics:**
+- Virtualization history and evolution
+- Docker architecture and component interaction
+- Container runtime and orchestration concepts
+- Networking models and communication patterns
+- Storage and data persistence strategies
+- Security in containerized environments
+- DevOps workflows and CI/CD integration
+- Production deployment patterns
 
-**Core Phase** covers practical Docker implementation through image management, container deployment, and lifecycle operations. Students gain hands-on experience with real-world workflows and best practices.
+Theory provides context that makes practical experiments more meaningful and helps students understand "why" behind "what" they're doing in labs.
 
-**Advanced Phase** explores optimization techniques, performance analysis, and production-ready configurations. Students learn to make informed decisions about image selection, resource allocation, and deployment strategies.
-
----
-
-## Learning Outcomes
-
-Upon completing this coursework, students will have demonstrated proficiency in:
-
-- Understanding virtualization concepts and containerization advantages
-- Installing, configuring, and managing Docker in development environments
-- Pulling, running, and managing Docker containers
-- Creating optimized Docker images with appropriate base systems
-- Analyzing image layers and understanding size-performance trade-offs
-- Comparing different deployment approaches and selecting appropriate solutions
-- Implementing best practices for containerized application development
-- Troubleshooting common container issues and optimizing performance
+**Note:** Complete theory session documentation will be added as the course progresses.
 
 ---
 
-## Repository Contents
+## Documentation Standards
 
-The repository is organized to support both laboratory work and theoretical study:
+All experimental reports maintain consistent quality:
 
-- **Lab directory** contains detailed experiment documentation and procedures
-- **Asset directory** stores screenshots and visual documentation organized by experiment
-- **Theory directory** houses classroom materials and supplementary resources
-- **README file** serves as the main entry point and course overview
+**Structure:**
+- Clear experiment title and objectives
+- Prerequisites and setup requirements
+- Step-by-step procedures with expected outputs
+- Command examples with explanations
+- Screenshot evidence at key points
+- Data analysis and interpretation
+- Conclusions with real-world implications
 
-Experiments progress sequentially, with earlier content providing foundation for later, more advanced topics. Each experiment is self-contained with clear objectives and expected outcomes.
-
----
-
-## Documentation Quality
-
-All laboratory reports maintain consistent professional standards:
-
-- Clear experiment titles and metadata
-- Explicitly stated learning objectives
-- Complete prerequisites and setup instructions
-- Step-by-step procedures with command examples
-- Expected output examples for verification
-- Detailed visual documentation through screenshots
-- Comparative analysis and performance data
-- Real-world application context
-- Comprehensive resource references
-
-This standardized approach ensures clarity, reproducibility, and professional presentation across all experiments.
-
----
-
-## Assessment and Progress
-
-| Experiment | Completion | Difficulty | Technologies |
-|-----------|-----------|-----------|----------------|
-| 0 - WSL Setup | 100% | Beginner | WSL2, Ubuntu, Git |
-| 1 - VMs vs Containers | 100% | Intermediate | Vagrant, VirtualBox, Docker |
-| 2 - Docker Basics | 100% | Beginner | Docker CLI, Images |
-| 3 - Image Optimization | 100% | Intermediate | Dockerfile, Base Images |
-| 4 - Docker Essentials | 0% | Advanced | Docker Compose, Security |
-
+**Quality Characteristics:**
+- Professional technical writing
+- Reproducible procedures
+- Comparative analysis where applicable
+- Visual documentation
+- Reference to official documentation
+- Performance metrics and data
 
 ---
 
@@ -235,73 +223,138 @@ This standardized approach ensures clarity, reproducibility, and professional pr
 
 ```
 DevOps-Theory-Lab/
-├── Lab/
-│   ├── Experiment 0_ Windows Subsystem for Linux (WSL) Configuration.md
-│   ├── Experiment 1_ Comparison of Virtual Machines (VMs) and Containers.md
-│   ├── Experiment 2_Docker Basic Operations.md
-│   ├── Experiment 3_ Deploying NGINX Using Different Base Images...md
-│   └── Experiment 4_Docker Essentials.md
-├── Asset/
-│   ├── Lab_0/          (Screenshots: 0-1.png through 0-6.png)
-│   ├── Lab_1/          (Screenshots: 1-1.png through 1-10.png)
-│   ├── Lab_2/          (Screenshots: 2-1.png through 2-7.png)
-│   └── Lab_3/          (Screenshots: 3-1.png through 3-8.png)
-├── Theory/             (Classroom practicals and supplementary materials)
-├── README.md           (This file)
-└── .gitignore
+│
+├── Lab/                                    # Laboratory Experiments
+│   ├── Experiment_0-Windows_Subsystem_for_Linux(WSL)_Configuration.md
+│   ├── Experiment_1-Comparison_of_Virtual_Machines(VMs)_and_Containers.md
+│   ├── Experiment_2-Docker_Basic_Operations.md
+│   ├── Experiment_3-Deploying_NGINX_Using_Different_Base_Images...md
+│   └── Experiment_4-Docker_Essentials.md
+│
+├── Asset/                                  # Visual Documentation & Screenshots
+│   ├── Lab_0/
+│   │   ├── 0-1.png through 0-6.png       (WSL Configuration)
+│   │
+│   ├── Lab_1/
+│   │   ├── 1-1.png through 1-10.png      (VMs vs Containers Comparison)
+│   │
+│   ├── Lab_2/
+│   │   ├── 2-1.png through 2-7.png       (Docker Basic Operations)
+│   │
+│   └── Lab_3/
+│       ├── 3-1.png through 3-8.png       (NGINX Base Images Analysis)
+│
+├── Theory/                                 # Classroom Theory Sessions (Planned)
+│   ├── Virtualization_Fundamentals/
+│   ├── Docker_Architecture/
+│   ├── Container_Networking/
+│   └── DevOps_Practices/
+│
+├── README.md                               # Main Documentation (This File)
+├── _config.yml                             # GitHub Pages Jekyll Configuration
+└── .gitignore                              # Git Ignore Rules
 ```
 
----
+**Directory Organization:**
 
-## Learning Objectives
-
-Upon completion of this course, students will be able to:
-
-- Understand virtualization concepts and containerization advantages  
-- Deploy and manage Docker containers in production environments  
-- Optimize Docker images for size, performance, and security  
-- Implement container networking and data persistence strategies  
-- Deploy multi-container applications using Docker Compose  
-- Compare different base images and choose appropriate solutions  
-- Apply DevOps best practices in containerized environments  
-- Troubleshoot container issues and optimize performance
+- **Lab/** - Complete experiment documentation with markdown files
+- **Asset/** - Screenshot evidence organized by experiment number
+- **Theory/** - Classroom materials and theoretical concepts
+- **Root Files** - Configuration and documentation index
 
 ---
 
-## Documentation Standards
+## Key Features & Highlights
 
-All lab reports follow a standardized format:
+**Comprehensive Documentation**
+Each experiment includes detailed procedures, expected outputs, command examples, and visual evidence through screenshots. Documentation follows academic standards while maintaining practical focus.
 
-1. **Experiment Title** - Clear, descriptive name
-2. **Metadata** - Date, technology stack
-3. **Objectives** - Clear learning outcomes
-4. **Prerequisites** - Required knowledge and tools
-5. **Procedure** - Step-by-step instructions with code blocks
-6. **Expected Output** - Verification examples
-7. **Screenshots** - Visual documentation of results
-8. **Analysis** - Performance metrics and comparisons
-9. **Conclusion** - Key takeaways and real-world applications
-10. **Resources** - Links to official documentation
+**Performance Analysis**
+Experiments include comparative metrics and analysis, demonstrating concrete differences between technologies and approaches through measurable data.
+
+**Progressive Complexity**
+Experiments build systematically from foundational setup through advanced optimization, with each building on previous knowledge and creating practical skills progression.
+
+**Real-World Application**
+Theory connects to practice, and each experiment includes discussion of real-world implications and industry applications of learned concepts.
+
+**Professional Standards**
+All work maintains consistency in formatting, structure, and quality, suitable for academic submission and professional portfolio representation.
 
 ---
 
-## Useful Resources
+## Technology & Tools Overview
 
-### Official Documentation
-- [Docker Official Docs](https://docs.docker.com/)
-- [Docker Hub](https://hub.docker.com/)
-- [WSL2 Documentation](https://docs.microsoft.com/en-us/windows/wsl/)
-- [Linux Documentation](https://linux.org/)
+**Development Environment**
+- Windows 11 as host operating system
+- WSL2 providing Linux compatibility layer
+- Ubuntu 22.04 for Linux development work
+- Git for version control and collaboration
 
-### Learning Platforms
-- [Docker Learning Center](https://www.docker.com/resources/what-is-docker/)
-- [Kubernetes.io](https://kubernetes.io/)
-- [CNCF - Cloud Native Computing Foundation](https://www.cncf.io/)
+**Containerization Platform**
+- Docker Engine for container runtime
+- Docker Hub for image registry and distribution
+- Docker Compose for multi-container orchestration
+- Alpine, Ubuntu, Debian as container base images
 
-### Related Technologies
-- [Vagrant Documentation](https://www.vagrantup.com/docs)
-- [VirtualBox Manual](https://www.virtualbox.org/manual/)
-- [Git Documentation](https://git-scm.com/doc)
+**Infrastructure & Virtualization**
+- VirtualBox for virtual machine hosting
+- Vagrant for VM provisioning and management
+- NGINX as containerization example application
+- Apache for web server comparisons
+
+**DevOps Technologies**
+- YAML configuration files
+- Dockerfiles for image building
+- Command-line interfaces (Bash, PowerShell)
+- GitHub for code hosting and collaboration
+
+---
+
+## Learning Path & Progression
+
+**Phase 1: Foundation (Experiment 0)**
+Establish development environment and foundational tools. WSL2 configuration, Linux basics, and Git setup prepare students for container work.
+
+**Phase 2: Comparative Analysis (Experiment 1)**
+Understand why containerization matters through hands-on comparison with traditional virtual machines. Data-driven approach to technology evaluation.
+
+**Phase 3: Core Implementation (Experiments 2-3)**
+Practical Docker work including image management, container lifecycle, and Dockerfile creation. Direct hands-on experience with containerization.
+
+**Phase 4: Advanced Topics (Experiment 4 - Planned)**
+Multi-container orchestration, production configurations, security practices, and optimization techniques for enterprise environments.
+
+---
+
+## Experiment Summary
+
+| Experiment | Focus | Key Takeaway |
+|-----------|-------|--------------|
+| 0 | WSL Setup | Environment ready |
+| 1 | VMs vs Containers | Containers 50-100x more efficient |
+| 2 | Docker Basics | Docker CLI mastery |
+| 3 | Image Optimization | Alpine 85-90% smaller than Ubuntu |
+| 4 | Advanced DevOps | Production-ready techniques |
+
+---
+
+## Course Progress
+
+This portfolio documents ongoing laboratory work. Additional experiments and theory materials will be added as the course progresses through the academic year.
+
+**Current Status:**
+- 4 Laboratory Experiments (Complete: 3, Planned: 1)
+- Theory sessions in progress
+- Documentation continuously updated
+- Screenshots organized by experiment
+- Asset library growing with each lab
+
+**Upcoming Additions:**
+- Experiment 4: Docker Essentials (Advanced Topics)
+- Theory session documentation
+- Additional experiments on Kubernetes and orchestration
+- Advanced DevOps practices and CI/CD
 
 ---
 
