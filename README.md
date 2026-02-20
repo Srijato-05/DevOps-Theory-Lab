@@ -52,7 +52,7 @@ Establish a Linux development environment within Windows using WSL2. This founda
 **Key Outcomes:**
 WSL2 properly configured with adequate resources, Ubuntu fully functional, and Git ready for repository management. Foundation established for all future experiments.
 
-[View Experiment 0](https://srijato-05.github.io/DevOps-Theory-Lab/Lab/Experiment_0_Windows_Subsystem_for_Linux(WSL)_Configuration)
+[View Experiment 0](.Lab/Experiment_0_Windows_Subsystem_for_Linux(WSL)_Configuration)
 
 ---
 
