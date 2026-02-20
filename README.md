@@ -52,7 +52,7 @@ Establish a Linux development environment within Windows using WSL2. This founda
 **Key Outcomes:**
 WSL2 properly configured with adequate resources, Ubuntu fully functional, and Git ready for repository management. Foundation established for all future experiments.
 
-[View Experiment 0](./Lab/Experiment_0-Windows_Subsystem_for_Linux(WSL)_Configuration.md)
+[View Experiment 0](./Lab/Experiment_0-Windows_Subsystem_for_Linux(WSL)_Configuration)
 
 ---
 
@@ -81,7 +81,7 @@ Containers demonstrate 50-100x memory efficiency advantage compared to full virt
 - Trade-offs between isolation levels and efficiency
 - Real-world use case suitability
 
-[View Experiment 1](./Lab/Experiment_1-Comparison_of_Virtual_Machines(VMs)_and_Containers.md)
+[View Experiment 1](./Lab/Experiment_1-Comparison_of_Virtual_Machines(VMs)_and_Containers)
 
 ---
 
@@ -106,7 +106,7 @@ The hands-on approach focuses on understanding Docker CLI commands and their pra
 **Progression Path:**
 This experiment provides essential foundation for Experiment 3's image optimization work and prepares students for multi-container orchestration in advanced experiments.
 
-[View Experiment 2](./Lab/Experiment_2-Docker_Basic_Operations.md)
+[View Experiment 2](./Lab/Experiment_2-Docker_Basic_Operations)
 
 ---
 
@@ -138,7 +138,7 @@ Students learn to create Dockerfiles from scratch, analyze multi-layer image str
 **Real-World Application:**
 Image optimization is critical in production environments where thousands of container instances deploy across distributed systems. Size reduction translates directly to infrastructure cost savings and improved deployment velocity.
 
-[View Experiment 3](./Lab/Experiment_3-Deploying_NGINX_Using_Different_Base_Images_and_Comparing_Image_Layers.md)
+[View Experiment 3](./Lab/Experiment_3-Deploying_NGINX_Using_Different_Base_Images_and_Comparing_Image_Layers)
 
 ---
 
@@ -157,7 +157,7 @@ Advanced Docker concepts including multi-stage builds, Docker Compose orchestrat
 - Performance optimization techniques
 - Logging and monitoring strategies
 
-[View Experiment 4](./Lab/Experiment_4-Docker_Essentials.md)
+[View Experiment 4](./Lab/Experiment_4-Docker_Essentials)
 
 ---
 
