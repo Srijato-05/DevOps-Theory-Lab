@@ -1,9 +1,6 @@
-# Experiment 0: Windows Subsystem for Linux (WSL) Configurat**⚠️ Important Note:** A system restart is required after this command completes. Save all work before proceeding.
+# Experiment 0: Windows Subsystem for Linux (WSL) Configuration
 
-![WSL Installation](../Asset/Lab_0/0-1.png) & Git Installation
-
-**Date:** February 9, 2026  
-**Lab Type:** Infrastructure Setup
+**Date:** January 24 9, 2026
 
 ---
 
