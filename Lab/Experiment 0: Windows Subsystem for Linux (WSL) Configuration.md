@@ -80,7 +80,7 @@ Please enable the Virtual Machine Platform Windows feature and ensure virtualiza
 
 **Important Note:** A system restart is required after this command completes. Save all work before proceeding.
 
-![WSL Installation](../Asset/0/wsl-install.png)
+![WSL Installation](../Asset/Lab 0/0-1.png)
 
 ---
 
@@ -91,8 +91,6 @@ After running the installation command, restart your computer to allow Windows t
 ```powershell
 Restart-Computer
 ```
-
-![System Restart](../Asset/0/0-2.png)
 
 ### Step 3: Verify WSL Installation and Version
 
@@ -114,7 +112,7 @@ This confirms:
 - **Current State:** Running or Stopped
 - **WSL Version:** Version 2 (preferred) or Version 1
 
-![WSL List Verbose](../Asset/0/0-3.png)
+![WSL List Verbose](../Asset/Lab 0/0-2.png)
 
 ---
 
@@ -127,7 +125,7 @@ In cases where multiple Linux distributions are installed, designate Ubuntu as t
 wsl --set-default Ubuntu
 ```
 
-![Set Default Distribution](../Asset/0/0-4.png)
+![Set Default Distribution](../Asset/Lab 0/0-3.png)
 
 **Verification:**
 ```powershell
@@ -146,7 +144,7 @@ Ensure all future distributions use the improved WSL2 architecture, which provid
 wsl --set-default-version 2
 ```
 
-![WSL2 Default Version](../Asset/0/0-5.png)
+![WSL2 Default Version](../Asset/Lab 0/0-5.png)
 
 **Verification:**
 ```powershell
@@ -164,7 +162,7 @@ If an instance is currently running on WSL Version 1, upgrade it to WSL2 by spec
 wsl --set-version Ubuntu 2
 ```
 
-![Convert WSL Version](../Asset/0/0-6.png)
+![Convert WSL Version](../Asset/0/Lab 0-6.png)
 
 **Conversion Duration:** This may take 3-5 minutes depending on your system.
 
