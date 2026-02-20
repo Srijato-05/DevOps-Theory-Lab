@@ -395,7 +395,7 @@ docker rm nginx-container
 Based on practical measurements from both deployments:
 
 | **Metric** | **Virtual Machine** | **Container** |
-|-----------|-------------------|--------------|-----------|
+|-----------|-------------------|--------------|
 | **Boot Time** | 30-60 seconds | <1 second |
 | **Memory Usage (Idle)** | 512MB - 1GB | 5-15MB |
 | **Memory Usage (Running Nginx)** | 800MB - 1.2GB | 25-50MB |
