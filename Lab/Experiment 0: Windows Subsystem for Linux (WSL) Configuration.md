@@ -1,7 +1,6 @@
 # Experiment 0: Windows Subsystem for Linux (WSL) Configuration & Git Installation
 
-**Date:** February 9, 2026  
-**Lab Type:** Infrastructure Setup
+**Date:** 24th January 2026  
 
 ---
 
