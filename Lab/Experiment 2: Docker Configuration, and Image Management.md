@@ -1,9 +1,6 @@
 # Experiment 2: Docker Installation, Configuration, and Running Images
 
-**Date:** February 11, 2026  
-**Lab Type:** Containerization  
-**Difficulty Level:** Beginner
-
+**Date:** 31st January 2026
 ---
 
 ## Table of Contents
