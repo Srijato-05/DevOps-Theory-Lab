@@ -51,12 +51,6 @@ wsl --install --distribution Ubuntu
 ```
 
 **Expected Output:**
-```
-Installing, this may take a few minutes...
-WslRegisterDistribution failed with error: 0x80370102
-Please enable the Virtual Machine Platform Windows feature and ensure virtualization platform is enabled in the BIOS.
-```
-*(If you see this error, enable Hyper-V in Windows Features)*
 
 **Important Note:** A system restart is required after this command completes. Save all work before proceeding.
 
