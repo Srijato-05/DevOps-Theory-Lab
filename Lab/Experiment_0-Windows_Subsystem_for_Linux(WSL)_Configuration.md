@@ -1,3 +1,8 @@
+---
+layout: default
+title: "Experiment 1: Comparison of Virtual Machines and Containers"
+---
+
 # Experiment 0: Windows Subsystem for Linux (WSL) Configurat**⚠️ Important Note:** A system restart is required after this command completes. Save all work before proceeding.
 
 ![WSL Installation](../Asset/Lab_0/0-1.png) & Git Installation
