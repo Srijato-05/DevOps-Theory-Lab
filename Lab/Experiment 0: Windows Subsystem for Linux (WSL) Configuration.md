@@ -1,29 +1,7 @@
-# Experiment 0: Windows Subsystem for Linux
-
-### Step 1: Install WSL and Ubuntu Distribution
-
-Open **PowerShell as Administrator** and execute the installation command. This process automatically enables the Virtual Machine Platform and installs the latest Ubuntu distribution.
-
-**Command:**
-```powershell
-wsl --install --distribution Ubuntu
-```
-
-![Installation Command](../Asset/0/0-1.png)
-
-**Expected Output:**
-```
-Installing, this may take a few minutes...
-WslRegisterDistribution failed with error: 0x80370102
-Please enable the Virtual Machine Platform Windows feature and ensure virtualization platform is enabled in the BIOS.
-```
-*(If you see this error, enable Hyper-V in Windows Features)*
-
-**Important Note:** A system restart is required after this command completes. Save all work before proceeding.n
+# Experiment 0: Windows Subsystem for Linux (WSL) Configuration & Git Installation
 
 **Date:** February 9, 2026  
-**Lab Type:** Infrastructure Setup  
-**Difficulty Level:** Beginner
+**Lab Type:** Infrastructure Setup
 
 ---
 
@@ -40,12 +18,13 @@ Please enable the Virtual Machine Platform Windows feature and ensure virtualiza
 
 ## Objective
 
-Establish a functional Linux environment on a Windows host using Windows Subsystem for Linux (WSL2). This setup provides the necessary foundation for running DevOps tools, containerization engines (Docker), and Linux-based development environments natively on Windows.
+Establish a functional Linux development environment on a Windows host using Windows Subsystem for Linux (WSL2) and install Git for version control. This setup provides the necessary foundation for running DevOps tools, containerization engines (Docker), and Linux-based development environments natively on Windows.
 
 **Expected Outcomes:**
 - Successfully install WSL2 with Ubuntu distribution
 - Verify WSL2 installation and status
 - Configure Ubuntu as the default Linux environment
+- Install and configure Git for version control
 - Enable seamless Windows-Linux interoperability
 
 ---
@@ -56,6 +35,7 @@ Establish a functional Linux environment on a Windows host using Windows Subsyst
 - **Hardware:** Virtualization capability enabled in BIOS
 - **Permissions:** Administrator access to PowerShell
 - **Disk Space:** Minimum 5GB free storage
+- **Internet:** Required for downloading and installing components
 
 ---
 
@@ -80,7 +60,7 @@ Please enable the Virtual Machine Platform Windows feature and ensure virtualiza
 
 **Important Note:** A system restart is required after this command completes. Save all work before proceeding.
 
-![WSL Installation](../Asset/Lab 0/0-1.png)
+![WSL Installation](../Asset/Lab_0/0-1.png)
 
 ---
 
@@ -112,7 +92,7 @@ This confirms:
 - **Current State:** Running or Stopped
 - **WSL Version:** Version 2 (preferred) or Version 1
 
-![WSL List Verbose](../Asset/Lab 0/0-2.png)
+![WSL List Verbose](../Asset/Lab_0/0-2.png)
 
 ---
 
@@ -125,7 +105,7 @@ In cases where multiple Linux distributions are installed, designate Ubuntu as t
 wsl --set-default Ubuntu
 ```
 
-![Set Default Distribution](../Asset/Lab 0/0-3.png)
+![Set Default Distribution](../Asset/Lab_0/0-3.png)
 
 **Verification:**
 ```powershell
@@ -144,7 +124,7 @@ Ensure all future distributions use the improved WSL2 architecture, which provid
 wsl --set-default-version 2
 ```
 
-![WSL2 Default Version](../Asset/Lab 0/0-5.png)
+![WSL2 Default Version](../Asset/Lab_0/0-4.png)
 
 **Verification:**
 ```powershell
@@ -153,22 +133,114 @@ wsl --list --verbose
 
 ---
 
-### Step 6: Convert Existing WSL1 Instances (if applicable)
+### Step 6: Install and Configure Git for Version Control
 
-If an instance is currently running on WSL Version 1, upgrade it to WSL2 by specifying the distribution name.
+Git is an essential version control system for DevOps and collaborative development. Install Git within the Ubuntu WSL environment to enable version management, repository cloning, and collaborative workflows.
 
-**Command:**
-```powershell
-wsl --set-version Ubuntu 2
+#### 6.1: Update Package Manager
+
+First, update the Ubuntu package repositories to ensure you have the latest package listings:
+
+```bash
+sudo apt update
 ```
 
-![Convert WSL Version](../Asset/0/Lab 0-6.png)
+#### 6.2: Install Git
 
-**Conversion Duration:** This may take 3-5 minutes depending on your system.
+Install the Git version control system:
 
-**Status Check:**
-```powershell
-wsl --list --verbose
+```bash
+sudo apt install -y git
+```
+
+**Expected Output:**
+```
+Reading package lists... Done
+Building dependency tree... Done
+The following NEW packages will be installed:
+  git git-man liberror-perl
+0 upgraded, 3 newly installed, 0 removed
+...
+Processing triggers for man-db (2.10.2-1) ...
+```
+
+#### 6.3: Verify Git Installation
+
+Confirm that Git has been successfully installed by checking its version:
+
+```bash
+git --version
+```
+
+**Expected Output:**
+```
+git version 2.34.1
+```
+
+![Git Installation Verification](../Asset/Lab_0/0-5.png)
+
+---
+
+#### 6.4: Configure Git User Information
+
+Git requires user configuration for commit operations. Set your global Git identity:
+
+```bash
+git config --global user.name "Your Full Name"
+git config --global user.email "your.email@example.com"
+```
+
+**Example:**
+```bash
+git config --global user.name "John Doe"
+git config --global user.email "john.doe@company.com"
+```
+
+#### 6.5: Verify Git Configuration
+
+Display your current Git configuration to confirm settings:
+
+```bash
+git config --list
+```
+
+**Expected Output:**
+```
+user.name=John Doe
+user.email=john.doe@company.com
+core.repositoryformatversion=0
+core.filemode=true
+...
+```
+
+#### 6.6: Configure Git for WSL Integration
+
+Optimize Git performance in WSL by configuring it to handle Windows file paths:
+
+```bash
+git config --global core.autocrlf input
+```
+
+This setting ensures proper line ending handling between Windows and Linux environments.
+
+#### 6.7: Test Git Setup
+
+Create a test directory and initialize a Git repository to verify the setup:
+
+```bash
+mkdir ~/test-repo && cd ~/test-repo
+git init
+```
+
+**Expected Output:**
+```
+Initialized empty Git repository in /home/username/test-repo/.git/
+```
+
+Verify the repository configuration:
+
+```bash
+git config --list --local
 ```
 
 ---
@@ -249,12 +321,14 @@ sudo apt update && sudo apt upgrade -y
 ## Conclusion
 
 You have successfully:
-- Installed Windows Subsystem for Linux 2
+- Installed Windows Subsystem for Linux 2 (WSL2)
 - Configured Ubuntu as the default distribution
 - Verified installation and system compatibility
-- Established a Linux development environment on Windows
+- Installed and configured Git version control
+- Set up Git user identity and WSL integration
+- Established a fully functional Linux development environment on Windows
 
-Your Windows-Linux development environment is now ready for containerization (Docker), Kubernetes, and advanced DevOps tooling in subsequent experiments.
+Your Windows-Linux development environment is now ready for version control, containerization (Docker), Kubernetes, and advanced DevOps tooling in subsequent experiments.
 
 **Next Steps:** Proceed to Experiment 1 to install Docker and containerization tools.
 
@@ -263,6 +337,6 @@ Your Windows-Linux development environment is now ready for containerization (Do
 ## Additional Resources
 
 - [WSL Official Documentation](https://docs.microsoft.com/en-us/windows/wsl/)
-- [WSL2 Kernel Updates](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
-- [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701)
+- [Git Documentation](https://git-scm.com/doc)
+- [Windows Terminal](https://github.com/microsoft/terminal)
 - [Ubuntu on WSL Guide](https://ubuntu.com/wsl)
