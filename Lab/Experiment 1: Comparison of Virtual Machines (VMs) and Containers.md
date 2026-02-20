@@ -61,6 +61,8 @@ VBoxManage --version
 7.0.14r161095
 ```
 
+![VirtualBox Installation](../Asset/Lab_1/1-2.png)
+
 #### Step 2: Install Vagrant
 
 Download and install Vagrant from [vagrantup.com](https://www.vagrantup.com).
@@ -75,6 +77,8 @@ vagrant --version
 Vagrant 2.4.1
 ```
 
+![Vagrant Installation](../Asset/Lab_1/1-3.png)
+
 #### Step 3: Create VM Project Directory
 
 Organize your project structure for VM deployment:
@@ -83,6 +87,8 @@ Organize your project structure for VM deployment:
 mkdir vm-lab
 cd vm-lab
 ```
+
+![Create VM Project Directory](../Asset/Lab_1/1-1.png)
 
 #### Step 4: Initialize Vagrant with Ubuntu
 
@@ -111,6 +117,8 @@ Bringing machine 'default' up with 'virtualbox' provider...
 ==> default: Machine booted and ready for use.
 ```
 
+![Vagrant Up Deployment](../Asset/Lab_1/1-4.png)
+
 #### Step 6: Access the Virtual Machine
 
 Connect to the running VM via SSH:
@@ -119,7 +127,9 @@ Connect to the running VM via SSH:
 vagrant ssh
 ```
 
-### Part A: Nginx Installation in VM
+![Vagrant SSH Access](../Asset/Lab_1/1-8.png)
+
+---
 
 #### Step 1: Update Package Manager
 
@@ -159,6 +169,8 @@ sudo systemctl status nginx
    Loaded: loaded (/lib/systemd/nginx.service; enabled; vendor preset: enabled)
    Active: active (running) since Mon 2026-02-10 10:30:25 UTC; 5s ago
 ```
+
+![Nginx Running in VM](../Asset/Lab_1/1-5.png)
 
 #### Step 5: Access the Web Server
 
@@ -274,6 +286,8 @@ Hello from Docker!
 This message shows that your installation appears to be working correctly.
 ```
 
+![Docker Installation Verification](../Asset/Lab_1/1-6.png)
+
 ### Part B: Nginx Container Deployment
 
 #### Step 1: Pull Nginx Image
@@ -326,6 +340,8 @@ CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS   
 7a8c9d2e4f5a   nginx:latest   "/docker-entrypoint.…"   10 seconds ago   Up 9 seconds   0.0.0.0:8080->80/tcp   nginx-container
 ```
 
+![Docker Container Running](../Asset/Lab_1/1-7.png)
+
 #### Step 4: Test Web Server Access
 
 Access the Nginx container through the mapped port:
@@ -357,6 +373,8 @@ docker stats nginx-container
 CONTAINER ID   NAME               CPU %     MEM USAGE / LIMIT    MEM %     NET I/O
 7a8c9d2e4f5a   nginx-container    0.02%     12.5MiB / 2GiB       0.61%     1.2MB / 890kB
 ```
+
+![Docker Stats Resource Monitoring](../Asset/Lab_1/1-9.png)
 
 #### Stop and Remove Container
 
