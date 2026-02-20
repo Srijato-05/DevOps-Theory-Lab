@@ -394,16 +394,16 @@ docker rm nginx-container
 
 Based on practical measurements from both deployments:
 
-| **Metric** | **Virtual Machine** | **Container** | **Winner** |
+| **Metric** | **Virtual Machine** | **Container** |
 |-----------|-------------------|--------------|-----------|
-| **Boot Time** | 30-60 seconds | <1 second | Container |
-| **Memory Usage (Idle)** | 512MB - 1GB | 5-15MB | Container |
-| **Memory Usage (Running Nginx)** | 800MB - 1.2GB | 25-50MB | Container |
+| **Boot Time** | 30-60 seconds | <1 second |
+| **Memory Usage (Idle)** | 512MB - 1GB | 5-15MB |
+| **Memory Usage (Running Nginx)** | 800MB - 1.2GB | 25-50MB |
 | **CPU Overhead** | 5-10% | <1% | Container |
-| **Disk Space** | 2-3GB per VM | 100-300MB per image | Container |
-| **Startup Time** | 30-60 seconds | 100-500ms | Container |
-| **OS Isolation** | Complete | Process-level | VM |
-| **Deployment Speed** | Minutes | Seconds | Container |
+| **Disk Space** | 2-3GB per VM | 100-300MB per image |
+| **Startup Time** | 30-60 seconds | 100-500ms |
+| **OS Isolation** | Complete | Process-level |
+| **Deployment Speed** | Minutes | Seconds |
 
 ### Performance Characteristics
 
