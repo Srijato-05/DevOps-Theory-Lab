@@ -1,1 +1,18 @@
 theme: jekyll-theme-cayman
+
+title: "Containerization & DevOps Portfolio"
+description: "UPES | School of Computer Science | Academic Year 2025-26"
+author: "Srijato Das"
+
+url: "https://srijato-05.github.io/DevOps-Theory-Lab"
+baseurl: "/DevOps-Theory-Lab"
+github_username: Srijato-05
+
+markdown: kramdown
+highlighter: rouge
+
+exclude:
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+  - vendor
