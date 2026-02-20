@@ -1,5 +1,3 @@
-  Lab Report: NGINX Base Image Comparison and Layer Analysis
-
 # Lab Report: Deploying NGINX Using Different Base Images
 
 **Date:** February 20, 2026
