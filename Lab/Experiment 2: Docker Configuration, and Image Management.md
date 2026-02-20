@@ -1,72 +1,111 @@
-# Lab Report: Docker Installation, Configuration, and Image Management
+# Experiment 2: Docker Installation, Configuration, and Running Images
 
-**Date:** February 10, 2026
+**Date:** February 11, 2026  
+**Lab Type:** Containerization  
+**Difficulty Level:** Beginner
+
+---
+
+## Table of Contents
+
+1. [Objective](#objective)
+2. [Procedure](#procedure)
+3. [Result](#result)
+4. [Conclusion](#conclusion)
+
+---
 
 ## Objective
 
-The primary goal of this experiment is to gain proficiency in the core Docker workflow. Key objectives include:
-
-* Pulling official Docker images from remote registries.
-* Executing containers with specific port mapping configurations.
-* Managing the complete container lifecycle, from execution to removal.
+- Pull Docker images
+- Run containers
+- Manage container lifecycle
 
 ---
 
 ## Procedure
 
-### Step 1: Pulling a Docker Image
+### Step 1: Pull Image
 
-The initial phase involves retrieving the official Nginx image from the repository.
-
-**Command:**
+Pull the Nginx image from Docker Hub:
 
 ```bash
 docker pull nginx
 ```
 
-### Step 2: Executing Container with Port Mapping
+![Pull Docker Image](../Asset/Lab_2/2-1.png)
 
-The container is launched in detached mode, mapping host port 8080 to the container's internal port 80.
+---
 
-**Command:**
+### Step 2: Run Container with Port Mapping
+
+Run a container with port mapping (host port 8080 to container port 80):
 
 ```bash
 docker run -d -p 8080:80 nginx
 ```
 
-### Step 3: Verification of Active Containers
+![Run Container with Port Mapping](../Asset/Lab_2/2-2.png)
 
-The current state of running containers is verified to confirm successful execution.
+---
 
-**Command:**
+### Step 3: Verify Running Containers
+
+List all running containers:
 
 ```bash
 docker ps
 ```
 
+![Verify Running Containers](../Asset/Lab_2/2-4.png)
+
+---
+
 ### Step 4: Stop and Remove Container
 
-The active container instance is stopped and subsequently removed from the system.
-
-**Command:**
+Stop the running container and remove it:
 
 ```bash
 docker stop <container_id>
 docker rm <container_id>
 ```
 
-### Step 5: Image Removal
+![Stop Container](../Asset/Lab_2/2-6.png)
 
-The Nginx image is deleted from local storage to clean up system resources.
+![Remove Container](../Asset/Lab_2/2-7.png)
 
-**Command:**
+---
+
+### Step 5: Remove Image
+
+Remove the Docker image:
 
 ```bash
 docker rmi nginx
 ```
 
+![Remove Image](../Asset/Lab_2/2-5.png)
+
 ---
 
-## Result and Conclusion
+## Result
 
-The experiment was successful, with all lifecycle commands performed as expected. This lab demonstrated that containers are better suited for rapid deployment and microservices, while virtual machines provide stronger isolation.
+Docker images were successfully pulled, containers executed, and lifecycle commands performed.
+
+![Result Summary](../Asset/Lab_2/2-6.png)
+
+---
+
+## Overall Conclusion
+
+This lab demonstrated containerization using Docker, highlighting container management basics. Containers are better suited for rapid deployment and microservices, while VMs provide stronger isolation.
+
+---
+
+## Additional Resources
+
+- [Docker Official Documentation](https://docs.docker.com/)
+- [Docker Images Documentation](https://docs.docker.com/get-started/docker-concepts/building-images/)
+- [Docker CLI Reference](https://docs.docker.com/engine/reference/commandline/docker/)
+- [Docker Hub Registry](https://hub.docker.com/)
+- [Docker Getting Started Guide](https://docs.docker.com/get-started/)
