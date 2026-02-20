@@ -38,7 +38,7 @@ The curriculum emphasizes practical implementation over theory, with each experi
 
 ### Experiment 0: Windows Subsystem for Linux Configuration
 
-**January 24, 2026 | Status: Complete**
+January 24, 2026 
 
 Establish a Linux development environment within Windows using WSL2. This foundational experiment prepares the system for all subsequent containerization work and introduces essential command-line tools.
 
@@ -58,19 +58,19 @@ WSL2 properly configured with adequate resources, Ubuntu fully functional, and G
 
 ### Experiment 1: Comparison of Virtual Machines and Containers
 
-**January 24, 2026 | Status: Complete**
+January 24, 2026 
 
 Compare traditional virtualization (VirtualBox/Vagrant) with containerization (Docker) through hands-on deployment and performance measurement. This experiment demonstrates why containers have become the industry standard for microservices.
 
 **Core Comparison Metrics:**
 
-| Metric | Virtual Machines | Containers | Winner |
-|--------|-----------------|-----------|--------|
-| Boot Time | 30-60 seconds | <1 second | Containers |
-| Memory (Idle) | 512MB - 1GB | 5-15MB | Containers |
-| Memory (Running) | 800MB - 1.2GB | 25-50MB | Containers |
-| Disk Space | 2-3GB per VM | 100-300MB per image | Containers |
-| Deployment Speed | Minutes | Seconds | Containers |
+| Metric | Virtual Machines | Containers |
+|--------|-----------------|-----------|
+| Boot Time | 30-60 seconds | <1 second |
+| Memory (Idle) | 512MB - 1GB | 5-15MB |
+| Memory (Running) | 800MB - 1.2GB | 25-50MB |
+| Disk Space | 2-3GB per VM | 100-300MB per image |
+| Deployment Speed | Minutes | Seconds |
 
 **Key Findings:**
 Containers demonstrate 50-100x memory efficiency advantage compared to full virtual machines. This dramatic difference explains container adoption in cloud-native architectures, microservices, and CI/CD pipelines.
@@ -87,7 +87,7 @@ Containers demonstrate 50-100x memory efficiency advantage compared to full virt
 
 ### Experiment 2: Docker Installation, Configuration, and Running Images
 
-**January 31, 2026 | Status: Complete**
+January 31, 2026 
 
 Master fundamental Docker operations through practical image management and container lifecycle procedures. This experiment establishes core Docker competency required for advanced techniques.
 
@@ -112,7 +112,7 @@ This experiment provides essential foundation for Experiment 3's image optimizat
 
 ### Experiment 3: Deploying NGINX Using Different Base Images
 
-**February 7, 2026 | Status: Complete**
+February 7, 2026
 
 Analyze Docker image optimization through comparison of different base operating systems. This advanced experiment examines the trade-offs between functionality, size, and performance.
 
@@ -144,7 +144,7 @@ Image optimization is critical in production environments where thousands of con
 
 ### Experiment 4: Docker Essentials
 
-**Status: Planned**
+February 14, 2026 
 
 Advanced Docker concepts including multi-stage builds, Docker Compose orchestration, security scanning, and production-ready configurations.
 
