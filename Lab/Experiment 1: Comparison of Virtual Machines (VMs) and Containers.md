@@ -61,8 +61,6 @@ VBoxManage --version
 7.0.14r161095
 ```
 
-![VirtualBox Installation](../Asset/Lab_1/1-2.png)
-
 #### Step 2: Install Vagrant
 
 Download and install Vagrant from [vagrantup.com](https://www.vagrantup.com).
@@ -77,7 +75,7 @@ vagrant --version
 Vagrant 2.4.1
 ```
 
-![Vagrant Installation](../Asset/Lab_1/1-3.png)
+![Vagrant Installation](../Asset/Lab_1/1-1.png)
 
 #### Step 3: Create VM Project Directory
 
@@ -87,8 +85,6 @@ Organize your project structure for VM deployment:
 mkdir vm-lab
 cd vm-lab
 ```
-
-![Create VM Project Directory](../Asset/Lab_1/1-1.png)
 
 #### Step 4: Initialize Vagrant with Ubuntu
 
@@ -100,6 +96,7 @@ vagrant init ubuntu/jammy64
 
 This command creates a `Vagrantfile` with default configurations for the Ubuntu image.
 
+![Vagrant Init Configuration](../Asset/Lab_1/1-2.png)
 #### Step 5: Deploy the Virtual Machine
 
 Launch the virtual machine (this may take 5-10 minutes for the first download):
@@ -117,7 +114,7 @@ Bringing machine 'default' up with 'virtualbox' provider...
 ==> default: Machine booted and ready for use.
 ```
 
-![Vagrant Up Deployment](../Asset/Lab_1/1-4.png)
+![Vagrant Up Deployment](../Asset/Lab_1/1-3.png)
 
 #### Step 6: Access the Virtual Machine
 
@@ -127,7 +124,7 @@ Connect to the running VM via SSH:
 vagrant ssh
 ```
 
-![Vagrant SSH Access](../Asset/Lab_1/1-8.png)
+![Vagrant SSH Access](../Asset/Lab_1/1-4.png)
 
 ---
 
@@ -170,9 +167,9 @@ sudo systemctl status nginx
    Active: active (running) since Mon 2026-02-10 10:30:25 UTC; 5s ago
 ```
 
-![Nginx Running in VM](../Asset/Lab_1/1-5.png)
+---
 
-#### Step 5: Access the Web Server
+### Part A: Resource Monitoring in VM
 
 Test the Nginx server:
 
@@ -190,7 +187,7 @@ curl localhost
 </html>
 ```
 
-### Part A: Resource Monitoring in VM
+![Nginx Running in VM](../Asset/Lab_1/1-5.png)
 
 Monitor VM resource consumption while running:
 
@@ -211,6 +208,8 @@ df -h
 Mem:          1.9Gi       340Mi       1.2Gi
 ```
 
+![VM Resource Monitoring](../Asset/Lab_1/1-6.png)
+
 ### Part A: Cleanup
 
 Exit the SSH session and terminate the VM:
@@ -220,6 +219,8 @@ exit
 vagrant halt
 vagrant destroy -f
 ```
+
+![VM Destruction](../Asset/Lab_1/1-7.png)
 
 ---
 
@@ -286,7 +287,7 @@ Hello from Docker!
 This message shows that your installation appears to be working correctly.
 ```
 
-![Docker Installation Verification](../Asset/Lab_1/1-6.png)
+![Docker Installation Verification](../Asset/Lab_1/1-8.png)
 
 ### Part B: Nginx Container Deployment
 
@@ -326,6 +327,8 @@ docker run -d -p 8080:80 --name nginx-container nginx:latest
 7a8c9d2e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9
 ```
 
+![Running Ngnix](../Asset/Lab_1/1-10.png)
+
 #### Step 3: Verify Container is Running
 
 List running containers:
@@ -340,7 +343,7 @@ CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS   
 7a8c9d2e4f5a   nginx:latest   "/docker-entrypoint.…"   10 seconds ago   Up 9 seconds   0.0.0.0:8080->80/tcp   nginx-container
 ```
 
-![Docker Container Running](../Asset/Lab_1/1-7.png)
+![Docker Container Running](../Asset/Lab_1/1-9.png)
 
 #### Step 4: Test Web Server Access
 
