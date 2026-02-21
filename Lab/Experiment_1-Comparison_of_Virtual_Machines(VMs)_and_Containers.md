@@ -12,6 +12,7 @@
 4. [Containers Implementation](#containers-implementation)
 5. [Resource Utilization Analysis](#resource-utilization-analysis)
 6. [Comparison & Conclusion](#comparison--conclusion)
+7. [Additional Resources](#additional-resources)
 
 ---
 
