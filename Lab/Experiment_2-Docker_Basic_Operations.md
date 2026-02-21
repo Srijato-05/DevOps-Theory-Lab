@@ -96,7 +96,7 @@ Docker images were successfully pulled, containers executed, and lifecycle comma
 
 ---
 
-## Overall Conclusion
+## Conclusion
 
 This lab demonstrated containerization using Docker, highlighting container management basics. Containers are better suited for rapid deployment and microservices, while VMs provide stronger isolation.
 
@@ -108,4 +108,5 @@ This lab demonstrated containerization using Docker, highlighting container mana
 - [Docker Images Documentation](https://docs.docker.com/get-started/docker-concepts/building-images/)
 - [Docker CLI Reference](https://docs.docker.com/engine/reference/commandline/docker/)
 - [Docker Hub Registry](https://hub.docker.com/)
+
 - [Docker Getting Started Guide](https://docs.docker.com/get-started/)
