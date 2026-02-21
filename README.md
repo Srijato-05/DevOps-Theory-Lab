@@ -331,15 +331,28 @@ All work maintains consistency in formatting, structure, and quality, suitable f
 
 ---
 
-## Experiment Summary
+## Experiment Summary — At a Glance
 
-| Experiment | Focus | Key Takeaway |
-|-----------|-------|--------------|
-| 0 | WSL Setup | Environment ready |
-| 1 | VMs vs Containers | Containers 50-100x more efficient |
-| 2 | Docker Basics | Docker CLI mastery |
-| 3 | Image Optimization | Alpine 85-90% smaller than Ubuntu |
-| 4 | Advanced DevOps | Production-ready techniques |
+A quick, approachable snapshot of each lab — what we did, and the main takeaway.
+
+| Experiment | Focus | Main Takeaway |
+|---:|:---|:---|
+| 0 | WSL2 setup | Development environment ready (WSL2 + Ubuntu + Git) |
+| 1 | VMs vs Containers | Containers are faster and use far less memory for app workloads |
+| 2 | Docker Basics | Core Docker workflows learned: pull, run, map ports, clean up |
+| 3 | NGINX Image Comparison | Alpine is extremely small; choose base image for your needs |
+| 4 | Docker Essentials | Planned: orchestration, security, production practices |
+
+What each experiment delivers:
+
+- Clear objectives and step-by-step instructions
+- Screenshots and verification commands for easy follow-along
+- Observations and simple recommendations you can reuse
+
+Next steps:
+
+- Add Experiment 4 with Compose and security best practices
+- Expand theory notes and add more screenshots and quick scripts
 
 ---
 
