@@ -12,6 +12,7 @@
 4. [Verification](#verification)
 5. [Troubleshooting](#troubleshooting)
 6. [Conclusion](#conclusion)
+7. [Additional Resources](#additional-resources)
 
 ---
 
