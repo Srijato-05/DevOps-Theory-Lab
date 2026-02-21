@@ -6,6 +6,26 @@ UPES | School of Computer Science | Academic Year 2025-26
 
 ---
 
+## Index
+
+Quick links:
+
+- [Student Information](#student-information)
+- [About This Portfolio](#about-this-portfolio)
+- Laboratory Experiments
+  - [Experiment 0 — WSL Configuration](#experiment-0-windows-subsystem-for-linux-configuration)
+  - [Experiment 1 — VMs vs Containers](#experiment-1-comparison-of-virtual-machines-vms-and-containers)
+  - [Experiment 2 — Docker Basics](#experiment-2-docker-installation-configuration-and-running-images)
+  - [Experiment 3 — Deploying NGINX](#experiment-3-deploying-nginx-using-different-base-images)
+  - [Experiment 4 — Docker Essentials](#experiment-4-docker-essentials)
+- [Technology Stack & Tools](#technology-stack--tools)
+- [Classroom Theory Integration](#classroom-theory-integration)
+- [Documentation Standards](#documentation-standards)
+- [Repository Structure](#repository-structure)
+- [Contact & Support](#contact--support)
+
+---
+
 ## Student Information
 
 | Detail | Information |
@@ -311,22 +331,6 @@ All work maintains consistency in formatting, structure, and quality, suitable f
 
 ---
 
-## Learning Path & Progression
-
-**Phase 1: Foundation (Experiment 0)**
-Establish development environment and foundational tools. WSL2 configuration, Linux basics, and Git setup prepare students for container work.
-
-**Phase 2: Comparative Analysis (Experiment 1)**
-Understand why containerization matters through hands-on comparison with traditional virtual machines. Data-driven approach to technology evaluation.
-
-**Phase 3: Core Implementation (Experiments 2-3)**
-Practical Docker work including image management, container lifecycle, and Dockerfile creation. Direct hands-on experience with containerization.
-
-**Phase 4: Advanced Topics (Experiment 4 - Planned)**
-Multi-container orchestration, production configurations, security practices, and optimization techniques for enterprise environments.
-
----
-
 ## Experiment Summary
 
 | Experiment | Focus | Key Takeaway |
@@ -336,25 +340,6 @@ Multi-container orchestration, production configurations, security practices, an
 | 2 | Docker Basics | Docker CLI mastery |
 | 3 | Image Optimization | Alpine 85-90% smaller than Ubuntu |
 | 4 | Advanced DevOps | Production-ready techniques |
-
----
-
-## Course Progress
-
-This portfolio documents ongoing laboratory work. Additional experiments and theory materials will be added as the course progresses through the academic year.
-
-**Current Status:**
-- 4 Laboratory Experiments (Complete: 3, Planned: 1)
-- Theory sessions in progress
-- Documentation continuously updated
-- Screenshots organized by experiment
-- Asset library growing with each lab
-
-**Upcoming Additions:**
-- Experiment 4: Docker Essentials (Advanced Topics)
-- Theory session documentation
-- Additional experiments on Kubernetes and orchestration
-- Advanced DevOps practices and CI/CD
 
 ---
 
