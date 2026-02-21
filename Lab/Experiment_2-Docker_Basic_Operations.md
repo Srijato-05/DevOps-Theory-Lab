@@ -12,6 +12,7 @@
 2. [Procedure](#procedure)
 3. [Result](#result)
 4. [Conclusion](#conclusion)
+5. [Additional Resources](#additional-resources)
 
 ---
 
@@ -110,3 +111,4 @@ This lab demonstrated containerization using Docker, highlighting container mana
 - [Docker Hub Registry](https://hub.docker.com/)
 
 - [Docker Getting Started Guide](https://docs.docker.com/get-started/)
+
