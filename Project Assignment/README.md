@@ -53,25 +53,46 @@ graph TD
     style DB_Int fill:#000,stroke:#888,color:#888
 ```
 
-### 2.2 Application Logic Flow
-The following sequence diagram illustrates the asynchronous lifecycle of a user request from the LAN:
+![Architecture Diagram](assets/diagrams/architecture_diagram.png)
+
+### 2.2 Advanced Application Logic & Transactional Flow
+The following sequence diagram illustrates the lifecycle of an asynchronous write operation, tracing the path from the physical network into the persistent storage plane.
 
 ```mermaid
-%%{init: {'theme': 'dark'}}%%
+%%{init: {'theme': 'dark', 'themeVariables': { 'actorBkg':'#000', 'actorBorder':'#fff', 'actorTextColor':'#fff', 'signalColor':'#fff', 'signalTextColor':'#fff', 'noteBkgColor':'#222', 'noteTextColor':'#fff'}}}%%
 sequenceDiagram
-    participant User as LAN Client
-    participant API as FastAPI (192.168.1.101)
-    participant DB as PostgreSQL (192.168.1.100)
-    participant Volume as pg_data (Persistent)
+    autonumber
+    
+    box "LAN Infrastructure" #000
+    participant Client as Physical LAN Client
+    participant Gateway as Router (192.168.1.1)
+    end
 
-    User->>API: POST /api/v1/records
-    Note over API: Validates Schema (Pydantic V2)
-    API->>DB: Async INSERT (internal_net)
-    DB->>Volume: Flush to Disk
-    Volume-->>DB: Success
-    DB-->>API: Row Created
-    API-->>User: 201 Created (JSON)
+    box "High-Performance Container Host" #000
+    participant API as FastAPI Engine (.101)
+    participant DB as Postgres 16 (.100)
+    participant Vol as Persistence (pg_data)
+    end
+
+    Client->>Gateway: RESTful POST (JSON Payload)
+    Gateway->>API: L2 Macvlan Packet Routing (Port 8000)
+    
+    activate API
+    Note over API: Pydantic V2 Validation
+    Note over API: Async Context Initialization
+    
+    API->>DB: Async SQLAlchemy Session (internal_net:5432)
+    activate DB
+    DB->>Vol: Fsync Transaction to Write-Ahead Log (WAL)
+    Vol-->>DB: Block I/O Acknowledged
+    DB-->>API: Async Execution Success (Primary Key Generated)
+    deactivate DB
+    
+    API-->>Client: HTTP/1.1 201 Created (JSON Response)
+    deactivate API
 ```
+
+![Transactional Flow](assets/diagrams/transactional_flow.png)
 
 ---
 
