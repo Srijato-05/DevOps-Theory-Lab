@@ -12,6 +12,7 @@ Standard container networking relies on NAT (Network Address Translation), which
 
 #### Architecture Diagram
 ```mermaid
+%%{init: {'theme': 'dark', 'themeVariables': { 'primaryColor': '#000', 'primaryTextColor': '#fff', 'primaryBorderColor': '#fff', 'lineColor': '#888'}}}%%
 graph TD
     subgraph LAN ["Physical Local Area Network (192.168.1.0/24)"]
         Router[Gateway: 192.168.1.1]
@@ -41,12 +42,22 @@ graph TD
     Desktop --- Router
     Router --- API_Ext
     Router --- DB_Ext
+
+    style Router fill:#000,stroke:#fff,color:#fff
+    style Desktop fill:#000,stroke:#fff,color:#fff
+    style API_Cont fill:#000,stroke:#fff,color:#fff
+    style DB_Cont fill:#000,stroke:#ccc,color:#ccc
+    style API_Ext fill:#000,stroke:#fff,color:#fff
+    style DB_Ext fill:#000,stroke:#fff,color:#fff
+    style API_Int fill:#000,stroke:#888,color:#888
+    style DB_Int fill:#000,stroke:#888,color:#888
 ```
 
 ### 2.2 Application Logic Flow
 The following sequence diagram illustrates the asynchronous lifecycle of a user request from the LAN:
 
 ```mermaid
+%%{init: {'theme': 'dark'}}%%
 sequenceDiagram
     participant User as LAN Client
     participant API as FastAPI (192.168.1.101)
