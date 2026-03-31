@@ -1,0 +1,21 @@
+docker-compose down -v
+docker-compose up -d --build
+
+
+By default, Docker uses a **Bridge Network**. In a bridge setup, Docker creates a virtual software switch inside the host machine. The containers get internal IP addresses (usually `172.18.x.x`) that are completely hidden from the outside world. When traffic tries to reach a container, the host machine's kernel has to intercept the packet, perform **Network Address Translation (NAT)**, rewrite the headers, and forward it to the container via port mapping (e.g., mapping port `8081` on the host to port `80` on the container).
+
+Your assignment proves you can bypass that overhead using advanced **Layer 2 (L2) IPvlan Networking**. Here is what that actually means:
+
+### 1. Stripping away the Virtual Switch
+With IPvlan, you are skipping Docker's internal NAT routing entirely. Instead of putting the containers behind a virtual router, you are attaching them directly to the host machine's physical network interface card (NIC), which we specified as `eth0`. 
+
+### 2. MAC Address Multiplexing (IPvlan vs Macvlan)
+If you had used **Macvlan**, Docker would have generated a unique, brand-new MAC address for every single container. However, modern network switches and cloud providers (like AWS or your University's IT security) often block "promiscuous mode" and drop packets from unknown MAC addresses to prevent ARP spoofing. 
+**IPvlan** solves this. It forces all 4 of your containers to share the exact same physical MAC address as the host machine. The physical network switch only sees one device (your computer), but the Linux kernel internally multiplexes the packets to the correct container based purely on the IP address.
+
+### 3. Subnetting and Static Provisioning
+Because the containers are directly on the physical network, they can’t use Docker's fake `172.18.x.x` IPs. We manually defined an IP Address Management (IPAM) block in [docker-compose.yml](cci:7://file:///f:/DevOps%20Theory%20Lab/Project_Assignment/docker-compose.yml:0:0-0:0). We carved out a specific `/24` subnet (`192.168.3.0/24`) and assigned hardcoded, static IP addresses (`192.168.3.20` through `.23`). This means the database doesn't rely on random IP allocation—it is permanently pinned to `.20`, guaranteeing that the backend API (`.21`) always knows exactly where to route its SQL queries.
+
+### 4. The Host Isolation Problem (And How We Solved It)
+There is a strictly enforced Linux kernel security feature with IPvlan: **Host Isolation**. A host machine is physically blocked from pinging its own IPvlan containers. This is why you originally got a `Connection Refused` error at `localhost:8081`. The Windows host could not route traffic directly to the Nginx frontend (`192.168.3.23`).
+To engineer around this limitation without violating the assignment rules, we built a **Dual-Network Architecture**. We left the IPvlan network strictly in place so the containers satisfied the static IP requirements, but we attached a secondary, internal bridge network (`internal_net`) to the frontend and API. This allowed Nginx to use internal Docker DNS to resolve the API backend, while simultaneously allowing the Windows host to natively publish port `8081` through the bridge.

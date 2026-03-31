@@ -1,98 +1,68 @@
-# Post-Deployment Verification & Testing Guide
+# Post-Deployment Verification and Testing Guide
 
-This guide provides a comprehensive list of commands to verify, monitor, and test the status of the containerized FastAPI + PostgreSQL stack. All commands should be run from the project root directory.
+This guide provides a comprehensive list of commands to verify, monitor, and test the status of the containerized enterprise stack. All services are launched via Docker Compose, which automatically handles network initialization.
 
 ## 1. Network Infrastructure Verification
 
-### Inspect Macvlan Connectivity
-Verify that the containers are correctly attached to the `backend_macvlan` network with their static IPs.
-```powershell
-docker network inspect backend_macvlan
-```
+### Inspect IPvlan Connectivity
+Verify that the containers are correctly attached to the ipvlan_net network with their static IPs.
+Run this command:
+docker network inspect ipvlan_net
 
 ### Check Container Port Mapping
-Verify that the API is exposed on port 8000.
-```powershell
+Verify that the services are correctly exposed:
+- API: Port 8000
+- Frontend: Port 8080
+- Redis: Port 6379 (Internal Cache)
+
+Run this command:
 docker ps --filter "name=advanced"
-```
 
-## 2. Service Health & Logs
+## 2. Advanced Enterprise Services Health
 
-### Check Real-time Service Status
-View the health status and current state of the orchestrated services.
-```powershell
-docker-compose ps
-```
+### Verify Redis Caching
+Confirm Redis is responding to cache operations inside the cache container:
+Run this command:
+docker exec advanced_redis redis-cli ping
 
-### Stream Application Logs
-Monitor the logs for both the API and Database simultaneously.
-```powershell
-docker-compose logs -f
-```
+## 3. Database and Authentication Structure
 
-### Inspect Database Startup
-Check specifically for PostgreSQL initialization and config loading.
-```powershell
-docker logs advanced_postgres
-```
+### Verify Application Database Tables
+Confirm the schema includes the new users table for JWT authentication.
+Run this command:
+docker exec -it advanced_postgres psql -U postgres -d webapp_db -c "\dt"
 
-## 3. Database & Migrations
+## 4. API Functional Authentication Testing (JWT)
 
-### Verify Alembic Migration History
-Confirm that the database schema is at the latest version.
-```powershell
-docker exec advanced_fastapi alembic history --verbose
-```
+### Register a New Account
+Test the /register endpoint to create a new operator account in the database.
+Run this command:
+docker exec advanced_fastapi curl -s -X POST -H "Content-Type: application/json" -d "{\"email\": \"operator@test.com\", \"password\": \"secure123\"}" http://localhost:8000/api/v1/register
 
-### Check Current Database Schema State
-Verify which revision is currently applied to the database.
-```powershell
-docker exec advanced_fastapi alembic current
-```
+### Acquire JWT Token (Login)
+Exchange credentials for a secure Bearer token via OAuth2.
+Run this command:
+docker exec advanced_fastapi curl -s -X POST -d "username=operator@test.com&password=secure123" http://localhost:8000/api/v1/login
 
-### Access PostgreSQL CLI
-Connect directly to the database to run manual SQL queries.
-```powershell
-docker exec -it advanced_postgres psql -U postgres -d webapp_db
-```
-*Inside psql, try:* `\dt` *(list tables) or* `SELECT * FROM records;`
+### Fetch Records Securely (GET)
+Attempt to fetch all records, validating the cache and token headers.
+(Replace YOUR_TOKEN with the token from the previous step).
+Run this command:
+docker exec advanced_fastapi curl -s -H "Authorization: Bearer YOUR_TOKEN" http://localhost:8000/api/v1/records
 
-## 4. API Functional Testing (CRUD)
-
-### Health Check Endpoint
-Verify the API is responsive.
-```powershell
-docker exec advanced_fastapi curl -s http://localhost:8000/api/v1/health
-```
-
-### Insert a Record (POST)
-Test the database write capability via the FastAPI endpoint.
-```powershell
-docker exec advanced_fastapi curl -s -X POST -H "Content-Type: application/json" -d "{\`"name\`": \`"Verification Test\`", \`"description\`": \`"Manual verification command executed\`"}" http://localhost:8000/api/v1/records
-```
-
-### Fetch All Records (GET)
-Verify the database read capability and data persistence.
-```powershell
-docker exec advanced_fastapi curl -s http://localhost:8000/api/v1/records
-```
-
-## 5. Maintenance & Troubleshooting
+## 5. Maintenance and Troubleshooting
 
 ### Restart the Stack
 Restart all services to test persistence and recovery.
-```powershell
+Run this command:
 docker-compose restart
-```
 
 ### View Resource Usage
 Monitor CPU and Memory consumption to verify resource limits are respected.
-```powershell
-docker stats advanced_fastapi advanced_postgres
-```
+Run this command:
+docker stats
 
 ### Remove All Resources
-Clean up the containers and network (does not remove the named volume `advanced_pgdata`).
-```powershell
+Clean up the containers and network (does not remove the named volume advanced_pgdata).
+Run this command:
 docker-compose down
-```

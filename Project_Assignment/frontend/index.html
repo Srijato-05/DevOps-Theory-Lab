@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=fresh3">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-area">
+                <h1>Welcome</h1>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Manage your items simply.</p>
+            </div>
+            <div id="api-status" class="status-badge">
+                <span class="status-dot"></span>
+                <span id="status-text">Backend Online</span>
+            </div>
+        </header>
+
+        <main class="dashboard-grid">
+            <!-- Left Side: Control Form -->
+            <section class="card" id="deploy-section" style="display: none;">
+                <h2 style="margin-bottom: 20px; font-weight: 600;">Add New Item</h2>
+                <form id="record-form">
+                    <div class="form-group">
+                        <label for="name">Item Name</label>
+                        <input type="text" id="name" placeholder="e.g., My New Project" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" rows="3" placeholder="What is this item about?..." required></textarea>
+                    </div>
+                    <button type="submit" id="submit-btn" class="btn-primary">Save Item</button>
+                </form>
+            </section>
+
+            <!-- Authentication Section -->
+            <section class="card" id="auth-section">
+                <h2 style="margin-bottom: 20px; font-weight: 600;">Please Log In</h2>
+                <form id="auth-form">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="you@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="••••••••" required>
+                    </div>
+                    <div style="display: flex; gap: 10px;">
+                        <button type="submit" id="login-btn" class="btn-primary" style="flex: 1;">Log In</button>
+                        <button type="button" id="register-btn" class="btn-secondary" style="flex: 1;">Sign Up</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Right Side: Data Feed -->
+            <section class="card">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <h2 style="font-weight: 600;">Saved Items</h2>
+                    <div style="display: flex; gap: 15px; align-items: center;">
+                        <span id="user-display" style="color: var(--text-muted); font-size: 0.8rem; display: none;"></span>
+                        <span id="logout-btn" style="color: #ff4444; cursor: pointer; font-size: 0.8rem; font-weight: 700; display: none;" onclick="logout()">LOGOUT</span>
+                        <span style="color: var(--accent); cursor: pointer; font-size: 0.8rem; font-weight: 700;" onclick="loadRecords()">RELOAD</span>
+                    </div>
+                </div>
+                <div id="records-list" class="records-container">
+                    <!-- Dynamic Content -->
+                    <div class="record-item" style="border: none; justify-content: center; color: var(--text-muted);">
+                        <p>Please log in to view items.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
