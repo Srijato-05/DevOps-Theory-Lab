@@ -57,7 +57,7 @@ services:
 ### 3. Mapping: Docker Run vs Docker Compose
 
 | Docker Run Flag | Docker Compose Equivalent |
-|-----------------|---------------------------|
+| :--- | :--- |
 | `-p 8080:80` | `ports:` |
 | `-v host:container` | `volumes:` |
 | `-e KEY=value` | `environment:` |
@@ -338,7 +338,7 @@ volumes:
   wp_data:
 ```
 
-**Step 3: Explanation of Key Sections**
+### 3. Explanation of Key Sections
 - **services**: Defines the containers (`db` for MySQL and `wordpress` for the application).
 - **depends_on**: Ensures the database container starts before the WordPress application.
 - **environment**: Configures database credentials and connection parameters.
@@ -387,8 +387,8 @@ docker service scale wpstack_wordpress=3
 ![Docker Swarm Scaling](../Asset/Lab_6/6B/3.png)
 
 #### Comparison: Docker Compose vs Docker Swarm
-| Feature | Docker Compose | Docker Swarm |
-|---------|----------------|--------------|
+| Metric | Docker Compose | Docker Swarm |
+| :--- | :--- | :--- |
 | **Scope** | Single host | Multi-node cluster |
 | **Scaling** | Manual | Built-in |
 | **Load Balancing**| No | Yes (Internal) |

@@ -203,10 +203,10 @@ df -h
 ```
 
 **Expected Output (Memory):**
-```
-              total        used        free
-Mem:          1.9Gi       340Mi       1.2Gi
-```
+
+| Type | Total | Used | Free |
+| :--- | :--- | :--- | :--- |
+| **Memory** | 1.9 GiB | 340 MiB | 1.2 GiB |
 
 ![VM Resource Monitoring](../Asset/Lab_1/1-6.png)
 
@@ -372,10 +372,10 @@ docker stats nginx-container
 ```
 
 **Expected Output:**
-```
-CONTAINER ID   NAME               CPU %     MEM USAGE / LIMIT    MEM %     NET I/O
-7a8c9d2e4f5a   nginx-container    0.02%     12.5MiB / 2GiB       0.61%     1.2MB / 890kB
-```
+
+| Container ID | Name | CPU % | Mem Usage / Limit | Mem % | Net I/O |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `7a8c9d2e4f5a` | `nginx-container` | 0.02% | 12.5MiB / 2GiB | 0.61% | 1.2MB / 890kB |
 
 ![Docker Stats Resource Monitoring](../Asset/Lab_1/1-9.png)
 
@@ -388,19 +388,21 @@ docker rm nginx-container
 
 ---
 
+---
+
 ## Resource Utilization Analysis
 
 ### Comparison Metrics
 
 Based on practical measurements from both deployments:
 
-| **Metric** | **Virtual Machine** | **Container** | **Winner** |
-|-----------|-------------------|--------------|-----------|
-| **Boot Time** | 30-60 seconds | <1 second | Container |
+| Metric | Virtual Machine | Container | Winner |
+| :--- | :--- | :--- | :---: |
+| **Boot Time** | 30-60 seconds | < 1 second | Container |
 | **Memory Usage (Idle)** | 512MB - 1GB | 5-15MB | Container |
-| **Memory Usage (Running Nginx)** | 800MB - 1.2GB | 25-50MB | Container |
-| **CPU Overhead** | 5-10% | <1% | Container |
-| **Disk Space** | 2-3GB per VM | 100-300MB per image | Container |
+| **Memory Usage (Running)**| 800MB - 1.2GB | 25-50MB | Container |
+| **CPU Overhead** | 5-10% | < 1% | Container |
+| **Disk Space** | 2-3GB per VM | 100-300MB per image| Container |
 | **Startup Time** | 30-60 seconds | 100-500ms | Container |
 | **OS Isolation** | Complete | Process-level | VM |
 | **Deployment Speed** | Minutes | Seconds | Container |

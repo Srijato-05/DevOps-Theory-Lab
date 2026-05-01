@@ -96,12 +96,12 @@ docker stack rm wpstack
 ## 3. Analysis: Compose vs Swarm
 
 | Feature | Docker Compose | Docker Swarm |
-|---------|----------------|--------------|
-| **Scope** | Single host only | Multi-node cluster |
-| **Scaling** | Manual/Basic | Built-in (Service-based) |
-| **Load Balancing**| No (Port conflicts) | Yes (Internal VIP) |
-| **Self-Healing** | No | Yes (Automatic) |
-| **Rolling Updates**| No | Yes (Zero downtime) |
+| :--- | :--- | :--- |
+| **Orchestration** | Single-host only | Multi-host cluster |
+| **Scaling** | Manual (`--scale`) | Declarative (`replicas`) |
+| **Self-healing** | Minimal (restart policies) | Built-in (auto-recovery) |
+| **Rolling Updates**| Rebuild/Restart | Native rolling updates |
+| **Load Balancing** | External needed | Built-in (Service mesh) |
 | **Use Case** | Development, Testing | Simple production clusters |
 
 ---

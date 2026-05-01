@@ -7,7 +7,7 @@ To understand why Kubernetes is used, learn its core concepts, and implement dep
 While Docker Swarm is simple, **Kubernetes (K8s)** is the industry standard for production environments due to its advanced feature set.
 
 | Reason | Explanation |
-|--------|-------------|
+| :--- | :--- |
 | **Industry Standard** | Most enterprises and cloud providers use Kubernetes. |
 | **Powerful Scheduling**| Automatically determines the best node to run your application. |
 | **Large Ecosystem** | Extensive support for monitoring, logging, and networking plugins. |
@@ -15,7 +15,7 @@ While Docker Swarm is simple, **Kubernetes (K8s)** is the industry standard for 
 
 ### Core Concepts Mapping
 | Docker Concept | Kubernetes Equivalent | Description |
-|----------------|-----------------------|-------------|
+| :--- | :--- | :--- |
 | **Container** | **Pod** | A group of one or more containers. The smallest unit in K8s. |
 | **Compose Service**| **Deployment** | Describes the desired state (image, replicas, labels). |
 | **Load Balancing** | **Service** | Exposes your app to the outside world with a fixed IP/DNS. |
@@ -149,7 +149,7 @@ kubectl get nodes
 ## 5. Summary of Commands (Cheat Sheet)
 
 | Goal | Command |
-|------|---------|
+| :--- | :--- |
 | **Apply configuration** | `kubectl apply -f file.yaml` |
 | **List pods** | `kubectl get pods` |
 | **List services** | `kubectl get svc` |

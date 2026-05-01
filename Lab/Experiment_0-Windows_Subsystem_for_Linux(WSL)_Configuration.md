@@ -1,6 +1,9 @@
-# Experiment 0: Windows Subsystem for Linux (WSL) Configurat**⚠️ Important Note:** A system restart is required after this command completes. Save all work before proceeding.
+# Experiment 0: Windows Subsystem for Linux (WSL) Configuration
 
-![WSL Installation](../Asset/Lab_0/0-1.png) & Git Installation
+> [!IMPORTANT]
+> A system restart is required after the installation command completes. Save all work before proceeding.
+
+![WSL and Git Installation](../Asset/Lab_0/0-1.png)
 
 **Date:** February 9, 2026  
 **Lab Type:** Infrastructure Setup
@@ -294,10 +297,12 @@ sudo apt update && sudo apt upgrade -y
 
 ---
 
+---
+
 ## Troubleshooting
 
 | Issue | Solution |
-|-------|----------|
+| :--- | :--- |
 | **"Virtual Machine Platform not enabled"** | Enable it in Windows Features: `Settings > Apps > Apps & features > Optional features > Virtual Machine Platform` |
 | **"Virtualization not enabled in BIOS"** | Restart computer, enter BIOS (Del/F2), enable VT-x (Intel) or AMD-V (AMD) |
 | **WSL1 instead of WSL2** | Run `wsl --set-default-version 2` and convert existing instances |
@@ -306,10 +311,14 @@ sudo apt update && sudo apt upgrade -y
 
 ---
 
+---
+
+---
+
 ## Performance Comparison
 
-| Feature | WSL1 | WSL2 |
-|---------|------|------|
+| Feature | WSL 1 | WSL 2 |
+| :--- | :---: | :---: |
 | **File System Performance** | Native Windows | Virtual Machine |
 | **Linux Compatibility** | ~80% | 100% |
 | **Docker Support** | Limited | Full |

@@ -407,7 +407,7 @@ docker run -d --name flask-app --network myapp-network -p 5000:5000 -v $(pwd)/ap
 
 ## Quick Reference Cheatsheet
 | Category | Commands |
-|----------|----------|
+| :--- | :--- |
 | **Volumes** | `docker volume ls`, `docker volume create <name>`, `docker run -v <volume>:/path` |
 | **Env Vars** | `docker run -e VAR=value`, `docker run --env-file .env`, `Dockerfile: ENV VAR=value` |
 | **Monitoring** | `docker stats`, `docker logs -f <container>`, `docker top <container>` |

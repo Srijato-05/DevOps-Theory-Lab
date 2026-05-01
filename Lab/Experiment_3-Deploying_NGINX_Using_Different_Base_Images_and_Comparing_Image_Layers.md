@@ -331,7 +331,7 @@ nginx-alpine    latest   x9y8z7w6v5u4   3 minutes ago   28MB
 ### Size Comparison Table
 
 | Base Image | Approximate Size | Characteristics |
-|-----------|-----------------|-----------------|
+| :--- | :--- | :--- |
 | **Official (Debian)** | ~187 MB | Pre-optimized, Production-ready |
 | **Ubuntu** | ~320 MB | Full OS utilities, Large surface |
 | **Alpine** | ~28 MB | Minimal, Fast, Lightweight |
@@ -396,7 +396,7 @@ z9y8x7w6v5u4   2 weeks ago    /bin/sh -c #(nop) ADD file:5d68d27cc15a80...    10
 ### Performance Characteristics
 
 | Metric | Official | Ubuntu | Alpine |
-|--------|----------|--------|--------|
+| :--- | :---: | :---: | :---: |
 | **Pull Time** | ~20 seconds | ~45 seconds | ~5 seconds |
 | **Container Startup** | ~1 second | ~2 seconds | ~0.5 seconds |
 | **Memory Usage (Idle)** | ~12 MB | ~18 MB | ~4 MB |
