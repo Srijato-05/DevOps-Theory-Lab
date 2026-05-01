@@ -6,8 +6,6 @@
 
 ---
 
----
-
 ## Table of Contents
 
 1. [Objective](#objective)
@@ -129,11 +127,6 @@ wsl --set-default-version 2
 
 ![WSL2 Default Version](../Asset/Lab_0/0-4.png)
 
-**Verification:**
-```powershell
-wsl --list --verbose
-```
-
 ---
 
 ### Step 6: Install and Configure Git for Version Control
@@ -193,27 +186,12 @@ git config --global user.name "Your Full Name"
 git config --global user.email "your.email@example.com"
 ```
 
-**Example:**
-```bash
-git config --global user.name "John Doe"
-git config --global user.email "john.doe@company.com"
-```
-
 #### 6.5: Verify Git Configuration
 
 Display your current Git configuration to confirm settings:
 
 ```bash
 git config --list
-```
-
-**Expected Output:**
-```
-user.name=John Doe
-user.email=john.doe@company.com
-core.repositoryformatversion=0
-core.filemode=true
-...
 ```
 
 #### 6.6: Configure Git for WSL Integration
@@ -225,26 +203,6 @@ git config --global core.autocrlf input
 ```
 
 This setting ensures proper line ending handling between Windows and Linux environments.
-
-#### 6.7: Test Git Setup
-
-Create a test directory and initialize a Git repository to verify the setup:
-
-```bash
-mkdir ~/test-repo && cd ~/test-repo
-git init
-```
-
-**Expected Output:**
-```
-Initialized empty Git repository in /home/username/test-repo/.git/
-```
-
-Verify the repository configuration:
-
-```bash
-git config --list --local
-```
 
 ---
 
@@ -268,8 +226,6 @@ Open a new PowerShell window and start Ubuntu:
 wsl
 ```
 
-Or directly from Windows Terminal by selecting "Ubuntu" from the dropdown.
-
 ### Check Ubuntu Version
 
 Once in the Ubuntu environment, verify the Linux distribution:
@@ -278,7 +234,7 @@ Once in the Ubuntu environment, verify the Linux distribution:
 lsb_release -a
 ```
 
-Expected output:
+**Expected Output:**
 ```
 Distributor ID: Ubuntu
 Release: 22.04 (or latest LTS version)
@@ -295,8 +251,6 @@ sudo apt update && sudo apt upgrade -y
 
 ---
 
----
-
 ## Troubleshooting
 
 | Issue | Solution |
@@ -306,10 +260,6 @@ sudo apt update && sudo apt upgrade -y
 | **WSL1 instead of WSL2** | Run `wsl --set-default-version 2` and convert existing instances |
 | **Slow WSL2 performance on network drives** | Store projects in WSL's native file system (`/home/username/`) instead of `/mnt/c/` |
 | **"Distribution not found"** | Run `wsl --install --distribution Ubuntu` again or download from Microsoft Store |
-
----
-
----
 
 ---
 
