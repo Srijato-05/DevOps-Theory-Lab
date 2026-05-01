@@ -1,8 +1,17 @@
 # Experiment 4: Docker Essentials
 
-**Date:** February 20, 2026  
-**Lab Type:** Containerization Essentials  
-**Difficulty Level:** Intermediate
+---
+
+## Table of Contents
+
+1. [Objective](#objective)
+2. [Prerequisites](#prerequisites)
+3. [Part A — Flask application](#part-a---flask-application-my-flask-app)
+4. [Part B — Optimization: Multi-stage build](#part-b---optimization-multi-stage-build)
+5. [Part C — Tagging and publishing to Docker Hub](#part-c---tagging-and-publishing-to-docker-hub)
+6. [Part D — Node.js App](#part-d---nodejs-app)
+7. [Troubleshooting & Best Practices](#troubleshooting--best-practices)
+8. [Conclusion](#conclusion)
 
 ---
 
@@ -18,19 +27,6 @@ Master core Docker skills including containerizing applications with Dockerfile,
 - Docker Engine installed and running
 - Docker Hub account (for publishing)
 - Basic familiarity with Python and Node.js
-
----
-
-## Index
-
-Quick links:
-
-- [Part A — Flask application](#part-a---flask-application-my-flask-app)
-- [Part B — Optimization: Multi-stage build](#part-b---optimization-multi-stage-build)
-- [Part C — Tagging and publishing to Docker Hub](#part-c---tagging-and-publishing-to-docker-hub)
-- [Part D — Node.js App](#part-d---nodejs-app)
-- [Troubleshooting & Best Practices](#troubleshooting--best-practices)
-- [Images placement notes](#images-placement-notes)
 
 ---
 
@@ -50,14 +46,14 @@ my-flask-app/
 ```
 
 1) Create project directory and files
-
-- mkdir my-flask-app
-- cd my-flask-app
+```bash
+mkdir my-flask-app
+cd my-flask-app
+```
 
 ![Project directory created](../Asset/Lab_4/4-1.png)
 
 2) app.py (simple web server)
-
 ```python
 from flask import Flask
 app = Flask(__name__)
@@ -77,7 +73,6 @@ if __name__ == '__main__':
 ![app.py created](../Asset/Lab_4/4-2.png)
 
 3) requirements.txt
-
 ```
 Flask==2.3.3
 ```
@@ -85,7 +80,6 @@ Flask==2.3.3
 ![requirements](../Asset/Lab_4/4-3.png)
 
 4) .dockerignore — keep the build context small
-
 ```
 __pycache__/
 *.pyc
@@ -101,7 +95,6 @@ logs/
 ![dockerignore](../Asset/Lab_4/4-4.png)
 
 5) Dockerfile (simple)
-
 ```dockerfile
 # Use Python base image
 FROM python:3.9-slim
@@ -119,33 +112,21 @@ CMD ["python", "app.py"]
 ![Dockerfile](../Asset/Lab_4/4-5.png)
 
 6) Build and run image
-
-- Build image: docker build -t my-flask-app:latest .
+- Build image: `docker build -t my-flask-app:latest .`
 
 ![build output](../Asset/Lab_4/4-6.png)
 
-- Verify images: docker images
+- Verify images: `docker images`
 
 ![docker images list](../Asset/Lab_4/4-7.png)
 
-- Run container: docker run -d -p 5000:5000 --name flask-container my-flask-app:latest
+- Run container: `docker run -d -p 5000:5000 --name flask-container my-flask-app:latest`
 
 ![container running](../Asset/Lab_4/4-8.png)
 
-- Test app: curl http://localhost:5000 or open browser
+- Test app: `curl http://localhost:5000`
 
 ![curl output or browser view](../Asset/Lab_4/4-9.png)
-
-- View logs: docker logs flask-container
-
-![container logs](../Asset/Lab_4/4-10.png)
-
-7) Image inspection and history
-
-- docker history my-flask-app
-- docker inspect my-flask-app
-
-![docker history output](../Asset/Lab_4/4-11.png)
 
 ---
 
@@ -154,7 +135,6 @@ CMD ["python", "app.py"]
 Multi-stage builds separate build-time dependencies from the runtime image.
 
 Dockerfile.multistage:
-
 ```dockerfile
 # STAGE 1: Builder
 FROM python:3.9-slim AS builder
@@ -179,41 +159,25 @@ CMD ["python", "app.py"]
 ![multistage Dockerfile](../Asset/Lab_4/4-12.png)
 
 Build and compare:
-
-- docker build -f Dockerfile.multistage -t flask-multistage:latest .
+- `docker build -f Dockerfile.multistage -t flask-multistage:latest .`
 
 ![multistage build output](../Asset/Lab_4/4-13.png)
-
-- docker images | grep flask-
-
-![compare images](../Asset/Lab_4/4-14.png)
-
-**Note:** multi-stage builds often reduce final image attack surface even if size differences depend on dependencies.
 
 ---
 
 ## Part C — Tagging and publishing to Docker Hub
 
-1) Login to Docker Hub: docker login
+1) Login to Docker Hub: `docker login`
 
 2) Tag the image for your Docker Hub repository (replace username):
-
-- docker tag my-flask-app:latest username/my-flask-app:1.0
-- docker tag flask-multistage:latest username/my-flask-app:multistage
+- `docker tag my-flask-app:latest username/my-flask-app:1.0`
+- `docker tag flask-multistage:latest username/my-flask-app:multistage`
 
 ![tagging](../Asset/Lab_4/4-15.png)
 
 3) Push images:
-
-- docker push username/my-flask-app:1.0
-- docker push username/my-flask-app:multistage
-
-4) Verify on Docker Hub (repo page)
-
-5) Pull and run on another machine:
-
-- docker pull username/my-flask-app:1.0
-- docker run -d -p 5000:5000 username/my-flask-app:1.0
+- `docker push username/my-flask-app:1.0`
+- `docker push username/my-flask-app:multistage`
 
 ---
 
@@ -222,7 +186,6 @@ Build and compare:
 A minimal Node.js Express app demonstrates a multi-stage pattern for Node.
 
 Project structure:
-
 ```
 my-node-app/
 ├── app.js
@@ -231,7 +194,6 @@ my-node-app/
 ```
 
 app.js:
-
 ```js
 const express = require('express');
 const app = express();
@@ -243,10 +205,7 @@ app.listen(port, () => console.log(`Server running on port ${port}`));
 
 ![Files](../Asset/Lab_4/4-15.png)
 
-package.json (dependencies: express)
-
 Dockerfile (recommended pattern):
-
 ```dockerfile
 # STAGE 1: Builder
 FROM node:18-alpine AS builder
@@ -267,10 +226,8 @@ CMD ["node", "app.js"]
 ```
 
 Build and run:
-
-- docker build -t my-node-app .
-- docker run -d -p 3000:3000 --name node-container my-node-app
-- curl http://localhost:3000
+- `docker build -t my-node-app .`
+- `docker run -d -p 3000:3000 --name node-container my-node-app`
 
 ![Docker Build](../Asset/Lab_4/4-18.png)
 ![Docker Build](../Asset/Lab_4/4-19.png)
@@ -283,17 +240,12 @@ Build and run:
 - Prefer pinned dependency versions in requirements.txt and package.json for reproducibility.
 - Use multi-stage builds to reduce surface area and split build/runtime concerns.
 - Run containers as non-root where possible.
-- Scan images with trivy or grype before publishing.
-- Clean up resources: docker system prune -a (careful: removes images/containers not in use).
-
----
-
-## Images placement notes
-
-All lab screenshots for this experiment are stored under Asset/Lab_4 and numbered 4-1.png through 4-19.png. Each image is referenced in context above to show directory creation, file contents, build outputs, runtime tests, and Docker Hub verification.
+- Clean up resources: `docker system prune -a` (careful: removes images/containers not in use).
 
 ---
 
 ## Conclusion
 
-This lab demonstrates a full container lifecycle: local app creation, Dockerfile authoring, optimization with .dockerignore and multi-stage builds, image inspection, tagging, and publishing to Docker Hub. The provided images document each key step for reproducibility.
+This lab demonstrates a full container lifecycle: local app creation, Dockerfile authoring, optimization with .dockerignore and multi-stage builds, image inspection, tagging, and publishing to Docker Hub.
+
+---

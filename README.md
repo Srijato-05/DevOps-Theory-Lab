@@ -1,118 +1,168 @@
-# Advanced DevOps and Containerized Infrastructure Laboratory
-**University of Petroleum and Energy Studies | School of Computer Science**
+# Containerization and DevOps Lab
+### University of Petroleum and Energy Studies
+**School of Computer Science | Cloud Computing & Virtualization Technology**
 
-## 1. Laboratory Overview
-This technical portfolio documents a comprehensive series of laboratory experiments focused on the architecture, deployment, and management of cloud-native infrastructure. The curriculum provides an end-to-end perspective on the DevOps lifecycle, moving from local POSIX-compliant environment virtualization to advanced cluster orchestration and automated security analysis.
-
-## 2. Core Technical Domains
-The laboratory curriculum is structured across the following specialized technical domains:
-
-### 2.1 Containerization and Runtime Isolation
-Implementation of OS-level virtualization utilizing the Docker engine to ensure environment parity and resource isolation across heterogeneous systems.
-
-### 2.2 Infrastructure as Code (IaC) and Automation
-Utilization of declarative configuration languages and agentless automation tools to enforce system state and eliminate configuration drift.
-
-### 2.3 Continuous Integration and Delivery (CI/CD)
-Construction of automated software delivery pipelines that integrate version control, automated building, and artifact management.
-
-### 2.4 Software Quality Assurance and Static Analysis
-Integration of Static Application Security Testing (SAST) into the development lifecycle to identify vulnerabilities and maintainability issues prior to runtime.
-
-### 2.5 Distributed System Orchestration
-Management of containerized workloads across clusters, implementing automated scaling, load balancing, and self-healing mechanisms.
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+![Jenkins](https://img.shields.io/badge/jenkins-%23D24939.svg?style=for-the-badge&logo=jenkins&logoColor=white)
+![Ansible](https://img.shields.io/badge/ansible-%23EE0000.svg?style=for-the-badge&logo=ansible&logoColor=white)
+![SonarQube](https://img.shields.io/badge/sonarqube-%234781eb.svg?style=for-the-badge&logo=sonarqube&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)
+![Ubuntu](https://img.shields.io/badge/ubuntu-%23E95420.svg?style=for-the-badge&logo=ubuntu&logoColor=white)
 
 ---
 
-## 3. Quick Reference Index
-
-| ID | Module Title | Primary Focus |
-|:---:|:---|:---|
-| 0 | [WSL Configuration](./Lab/Experiment_0-Windows_Subsystem_for_Linux(WSL)_Configuration.md) | Environment Virtualization |
-| 1 | [Virtualization Analysis](./Lab/Experiment_1-Comparison_of_Virtual_Machines(VMs)_and_Containers.md) | Virtualization Theory |
-| 2 | [Docker Primaries](./Lab/Experiment_2-Docker_Basic_Operations.md) | Container Management |
-| 3 | [Layered Architecture](./Lab/Experiment_3-Deploying_NGINX_Using_Different_Base_Images_and_Comparing_Image_Layers.md) | Storage Optimization |
-| 4 | [Runtime Essentials](./Lab/Experiment_4-Docker_Essentials.md) | Runtime Configuration |
-| 5 | [Data Persistence](./Lab/Experiment_5_Docker-Volumes_Monitoring_Networks.md) | Volume Management |
-| 6 | [Declarative Orchestration](./Lab/Experiment_6_Docker_Run_Comparison_Docker_Compose.md) | Service Orchestration |
-| 7 | [Pipeline Automation](./Lab/Experiment_7_Jenkins_Github_Docker-Hub.md) | CI/CD Integration |
-| 9 | [Configuration Management](./Lab/Experiment_9_Infrastructure_Automation_using_Ansible.md) | Infrastructure as Code |
-| 10 | [Static Analysis](./Lab/Experiment_10_SonarQube_Static_Code_Analysis.md) | Security Auditing |
-| 11 | [Cluster Management](./Lab/Experiment_11_Orchestration_using_Docker_Swarm.md) | Basic Orchestration |
-| 12 | [Advanced Orchestration](./Lab/Experiment_12_Container_Orchestration_using_Kubernetes.md) | Kubernetes API |
+## Student Profile
+- **Name:** Srijato Das
+- **Sap Id:** 500119148
+- **Enrollment No:** R2142230488
+- **Batch:** B1 CCVT
+- **Subject:** Containerization and DevOps
 
 ---
 
-## 4. Experimental Procedures and Technical Summaries
-
-### 4.1 Experiment 0: Windows Subsystem for Linux (WSL2) Configuration
-*   **Documentation**: [Experiment 0 Manual](./Lab/Experiment_0-Windows_Subsystem_for_Linux(WSL)_Configuration.md)
-*   **Summary**: Establishment of a high-performance, POSIX-compliant virtualization layer on the Windows host. This procedure focuses on kernel optimization, distribution management (Ubuntu 22.04 LTS), and the integration of the Linux kernel with the Windows file system to support native development tools.
-
-### 4.2 Experiment 1: Comparative Analysis of Virtualization Methodologies
-*   **Documentation**: [Experiment 1 Manual](./Lab/Experiment_1-Comparison_of_Virtual_Machines(VMs)_and_Containers.md)
-*   **Summary**: A theoretical and empirical study comparing Hypervisor-based virtualization (Type 1 and Type 2) with OS-level containerization. The analysis focuses on resource overhead, boot latency, and isolation boundaries.
-
-### 4.3 Experiment 2: Docker Fundamental Operations
-*   **Documentation**: [Experiment 2 Manual](./Lab/Experiment_2-Docker_Basic_Operations.md)
-*   **Summary**: Initial implementation of the Docker CLI for container lifecycle management. Key operations include image acquisition, container execution, state inspection, and ephemeral resource cleanup.
-
-### 4.4 Experiment 3: NGINX Deployment and Image Layer Optimization
-*   **Documentation**: [Experiment 3 Manual](./Lab/Experiment_3-Deploying_NGINX_Using_Different_Base_Images_and_Comparing_Image_Layers.md)
-*   **Summary**: Examination of the Union File System (UnionFS) and the impact of image layering on storage efficiency. The lab involves deploying NGINX using various base images (Alpine vs. Ubuntu) and auditing the resulting layer metadata.
-
-### 4.5 Experiment 4: Docker Essential Runtimes
-*   **Documentation**: [Experiment 4 Manual](./Lab/Experiment_4-Docker_Essentials.md)
-*   **Summary**: Configuration of advanced container runtime parameters, including environment variable injection, manual port mapping, and the execution of interactive shell sessions within isolated environments.
-
-### 4.6 Experiment 5: Persistent Storage and Network Isolation
-*   **Documentation**: [Experiment 5 Manual](./Lab/Experiment_5_Docker-Volumes_Monitoring_Networks.md)
-*   **Summary**: Implementation of Docker Volumes for data persistence across container restarts and the creation of isolated bridge networks to facilitate secure inter-container communication without host-level exposure.
-
-### 4.7 Experiment 6: Declarative Deployment with Docker Compose
-*   **Documentation**: [Experiment 6 Manual](./Lab/Experiment_6_Docker_Run_Comparison_Docker_Compose.md)
-*   **Summary**: A comparative study transitioning from imperative `docker run` commands to declarative multi-service orchestration using YAML. The lab features the deployment of a WordPress/MySQL stack with automated service discovery.
-
-### 4.8 Experiment 7: Automated CI/CD Pipeline Orchestration
-*   **Documentation**: [Experiment 7 Manual](./Lab/Experiment_7_Jenkins_Github_Docker-Hub.md)
-*   **Summary**: Construction of an end-to-end CI/CD pipeline using Jenkins. This includes automated source code acquisition via GitHub webhooks, containerized builds, and the secure pushing of artifacts to Docker Hub using credential injection.
-
-### 4.9 Experiment 9: Infrastructure Automation via Ansible
-*   **Documentation**: [Experiment 9 Manual](./Lab/Experiment_9_Infrastructure_Automation_using_Ansible.md)
-*   **Summary**: Implementation of agentless configuration management. The procedure covers SSH key distribution, inventory management, and the execution of idempotent YAML playbooks to standardize the state of remote managed nodes.
-
-### 4.10 Experiment 10: Static Application Security Testing (SAST)
-*   **Documentation**: [Experiment 10 Manual](./Lab/Experiment_10_SonarQube_Static_Code_Analysis.md)
-*   **Summary**: Integration of SonarQube into the development lifecycle. The experiment focuses on automated scanning for security vulnerabilities, code smells, and technical debt, enforcing quality gates within the deployment pipeline.
-
-### 4.11 Experiment 11: Basic Cluster Orchestration with Docker Swarm
-*   **Documentation**: [Experiment 11 Manual](./Lab/Experiment_11_Orchestration_using_Docker_Swarm.md)
-*   **Summary**: Transitioning from single-host Compose to multi-node cluster management. Features include service scaling, internal load balancing via the Swarm Ingress Mesh, and automated self-healing for failed container instances.
-
-### 4.12 Experiment 12: Advanced Orchestration via Kubernetes
-*   **Documentation**: [Experiment 12 Manual](./Lab/Experiment_12_Container_Orchestration_using_Kubernetes.md)
-*   **Summary**: Implementation of the Kubernetes API for advanced workload management. This includes the configuration of Pods, Deployments, and NodePort Services to manage scalable and resilient containerized applications.
+## Table of Contents
+1. [Laboratory Overview](#laboratory-overview)
+2. [Experiment Summary Table](#experiment-summary-table)
+3. [Detailed Experimental Summaries](#detailed-experimental-summaries)
+    - [Exp 0: WSL Configuration](#experiment-0-windows-subsystem-for-linux-wsl2-configuration)
+    - [Exp 1: Virtualization Methodologies](#experiment-1-comparative-analysis-of-virtualization-methodologies)
+    - [Exp 2: Docker Primaries](#experiment-2-docker-fundamental-operations)
+    - [Exp 3: Layered Architecture](#experiment-3-nginx-deployment-and-image-layer-optimization)
+    - [Exp 4: Docker Essentials](#experiment-4-docker-essential-runtimes)
+    - [Exp 5: Persistence & Networks](#experiment-5-persistent-storage-and-network-isolation)
+    - [Exp 6: Declarative Orchestration](#experiment-6-declarative-deployment-with-docker-compose)
+    - [Exp 7: CI/CD Pipelines](#experiment-7-automated-cicd-pipeline-orchestration)
+    - [Exp 9: Ansible Automation](#experiment-9-infrastructure-automation-via-ansible)
+    - [Exp 10: Static Code Analysis](#experiment-10-static-application-security-testing-sast)
+    - [Exp 11: Docker Swarm](#experiment-11-basic-cluster-orchestration-with-docker-swarm)
+    - [Exp 12: Kubernetes Orchestration](#experiment-12-advanced-orchestration-via-kubernetes)
+4. [Technical Specifications](#technical-specifications)
+5. [Design Principles](#design-principles)
+6. [Repository Organization](#repository-organization)
 
 ---
 
-## 4. Technical Specifications and Environment
-The experimental environment is standardized to ensure reproducibility and performance:
-*   **Operating System**: Windows 11 Enterprise (Host) / Ubuntu 22.04 LTS (WSL2)
-*   **Container Runtime**: Docker Engine v24.0.7
-*   **Automation Engine**: Ansible v2.10.8
-*   **CI Orchestrator**: Jenkins LTS (Containerized)
-*   **Analysis Engine**: SonarQube Community Edition
-*   **Orchestration API**: Kubernetes v1.29.0 (via k3d)
-
-## 5. Infrastructure Design Principles
-*   **Idempotency**: All automation procedures are designed to ensure that multiple executions yield the same system state without redundant modifications.
-*   **Declarative Configuration**: Preference for Infrastructure as Code (IaC) over manual imperative execution to ensure version control and auditability.
-*   **Security by Design**: Implementation of least-privilege networking and secure secret handling via environment variables and dedicated credential managers.
-*   **Scalability**: Architecture designed to handle horizontal scaling through cluster orchestration.
+## Laboratory Overview
+This technical portfolio documents a comprehensive series of laboratory experiments focused on the architecture, deployment, and management of cloud-native infrastructure. The curriculum provides an end-to-end perspective on the DevOps lifecycle, moving from local environment virtualization to advanced cluster orchestration and automated security analysis.
 
 ---
 
-## 6. Repository Organization
-*   **[/Lab](./Lab)**: Detailed technical documentation and experimental procedures for all modules.
-*   **[/Asset](./Asset)**: Empirical evidence, including terminal logs, architecture diagrams, and system snapshots.
-*   **[/Project_Assignment](./Project_Assignment)**: Advanced implementations focused on specialized network architectures and automated security protocols.
+## Experiment Summary Table
+
+| ID | Module Title | Primary Focus | Technical Stack | Documentation |
+|:---:|:---|:---|:---|:---:|
+| **0** | **WSL Configuration** | Environment Setup | WSL2, Ubuntu, Git | [View](./Lab/Experiment_0-Windows_Subsystem_for_Linux(WSL)_Configuration.md) |
+| **1** | **Virtualization Analysis**| VMs vs. Containers | Vagrant, VirtualBox | [View](./Lab/Experiment_1-Comparison_of_Virtual_Machines(VMs)_and_Containers.md) |
+| **2** | **Docker Primaries** | Image Lifecycle | Docker CLI, Nginx | [View](./Lab/Experiment_2-Docker_Basic_Operations.md) |
+| **3** | **Layered Architecture** | Image Optimization | Alpine, UnionFS | [View](./Lab/Experiment_3-Deploying_NGINX_Using_Different_Base_Images_and_Comparing_Image_Layers.md) |
+| **4** | **Docker Essentials** | Runtime Config | Env Vars, Mapping | [View](./Lab/Experiment_4-Docker_Essentials.md) |
+| **5** | **Data Persistence** | Volume Management | Docker Volumes, Bridge | [View](./Lab/Experiment_5_Docker-Volumes_Monitoring_Networks.md) |
+| **6** | **Declarative Deployment** | Service Orchestration | Docker Compose, YAML | [View](./Lab/Experiment_6_Docker_Run_Comparison_Docker_Compose.md) |
+| **7** | **Pipeline Automation** | CI/CD Integration | Jenkins, GitHub, Hub | [View](./Lab/Experiment_7_Jenkins_Github_Docker-Hub.md) |
+| **9** | **Configuration Management**| Infrastructure as Code | Ansible, SSH, YAML | [View](./Lab/Experiment_9_Infrastructure_Automation_using_Ansible.md) |
+| **10** | **Static Analysis** | Security & Quality | SonarQube, Maven | [View](./Lab/Experiment_10_SonarQube_Static_Code_Analysis.md) |
+| **11** | **Cluster Management** | Swarm Orchestration | Docker Swarm, Mesh | [View](./Lab/Experiment_11_Orchestration_using_Docker_Swarm.md) |
+| **12** | **Advanced Orchestration** | Kubernetes API | K8s, Pods, Services | [View](./Lab/Experiment_12_Container_Orchestration_using_Kubernetes.md) |
+
+---
+
+## Detailed Experimental Summaries
+
+### Experiment 0: Windows Subsystem for Linux (WSL2) Configuration
+- **Objective:** Establishment of a high-performance, POSIX-compliant virtualization layer on Windows.
+- **Key Tasks:** Enabling Virtual Machine Platform, installing Ubuntu 22.04 LTS, and configuring Git for cross-platform version control.
+- **Outcome:** A unified development environment bridge between Windows and Linux kernels.
+- **Manual:** [Lab 0 Manual](./Lab/Experiment_0-Windows_Subsystem_for_Linux(WSL)_Configuration.md)
+
+### Experiment 1: Comparative Analysis of Virtualization Methodologies
+- **Objective:** Empirical study comparing Hypervisor-based virtualization (VMs) with OS-level containerization.
+- **Key Tasks:** Deploying Ubuntu via Vagrant/VirtualBox and comparing its boot-time/resource usage against Docker containers.
+- **Outcome:** Deep understanding of hardware abstraction vs. kernel sharing.
+- **Manual:** [Lab 1 Manual](./Lab/Experiment_1-Comparison_of_Virtual_Machines(VMs)_and_Containers.md)
+
+### Experiment 2: Docker Fundamental Operations
+- **Objective:** Mastering the container lifecycle through the Docker CLI.
+- **Key Tasks:** Pulling images from Docker Hub, running detached containers, and managing ephemeral container states.
+- **Outcome:** Proficiency in image acquisition and container runtime management.
+- **Manual:** [Lab 2 Manual](./Lab/Experiment_2-Docker_Basic_Operations.md)
+
+### Experiment 3: NGINX Deployment and Image Layer Optimization
+- **Objective:** Optimization of storage footprint through layered architecture analysis.
+- **Key Tasks:** Building custom NGINX images using Ubuntu and Alpine bases to compare UnionFS layer metadata.
+- **Outcome:** Implementation of lightweight, security-hardened images (Alpine reduction of ~90%).
+- **Manual:** [Lab 3 Manual](./Lab/Experiment_3-Deploying_NGINX_Using_Different_Base_Images_and_Comparing_Image_Layers.md)
+
+### Experiment 4: Docker Essential Runtimes
+- **Objective:** Advanced runtime configuration and application containerization.
+- **Key Tasks:** Environment variable injection, custom port mapping, and executing interactive bash sessions within containers.
+- **Outcome:** Flexible deployment patterns for multi-environment application logic.
+- **Manual:** [Lab 4 Manual](./Lab/Experiment_4-Docker_Essentials.md)
+
+### Experiment 5: Persistent Storage and Network Isolation
+- **Objective:** Implementing non-volatile storage and isolated inter-container networking.
+- **Key Tasks:** Creating Docker Volumes for data persistence and custom bridge networks for secure service-to-service communication.
+- **Outcome:** Resilient data management and hardened network boundaries.
+- **Manual:** [Lab 5 Manual](./Lab/Experiment_5_Docker-Volumes_Monitoring_Networks.md)
+
+### Experiment 6: Declarative Deployment with Docker Compose
+- **Objective:** Transitioning from imperative commands to declarative multi-service stacks.
+- **Key Tasks:** Orchestrating a WordPress/MySQL stack using a single `docker-compose.yml` file.
+- **Outcome:** Repeatable, version-controlled multi-container infrastructure.
+- **Manual:** [Lab 6 Manual](./Lab/Experiment_6_Docker_Run_Comparison_Docker_Compose.md)
+
+### Experiment 7: Automated CI/CD Pipeline Orchestration
+- **Objective:** Construction of an end-to-end automated software delivery pipeline.
+- **Key Tasks:** Integrating Jenkins with GitHub webhooks to trigger automated Docker builds and pushes to Docker Hub.
+- **Outcome:** Zero-touch deployment workflow from commit to production registry.
+- **Manual:** [Lab 7 Manual](./Lab/Experiment_7_Jenkins_Github_Docker-Hub.md)
+
+### Experiment 9: Infrastructure Automation via Ansible
+- **Objective:** Agentless configuration management for large-scale infrastructure.
+- **Key Tasks:** Distributing SSH keys and executing idempotent YAML playbooks to standardize remote server states.
+- **Outcome:** Eliminating configuration drift through automated system provisioning.
+- **Manual:** [Lab 9 Manual](./Lab/Experiment_9_Infrastructure_Automation_using_Ansible.md)
+
+### Experiment 10: Static Application Security Testing (SAST)
+- **Objective:** Integrating automated quality gates into the DevOps lifecycle.
+- **Key Tasks:** Using SonarQube to analyze code for vulnerabilities, bugs, and technical debt.
+- **Outcome:** Enhanced software reliability and security posture prior to runtime.
+- **Manual:** [Lab 10 Manual](./Lab/Experiment_10_SonarQube_Static_Code_Analysis.md)
+
+### Experiment 11: Basic Cluster Orchestration with Docker Swarm
+- **Objective:** Transitioning to distributed cluster management and high availability.
+- **Key Tasks:** Initializing a Swarm manager, scaling services horizontally, and implementing self-healing via health checks.
+- **Outcome:** Resilient, load-balanced application delivery across multi-node clusters.
+- **Manual:** [Lab 11 Manual](./Lab/Experiment_11_Orchestration_using_Docker_Swarm.md)
+
+### Experiment 12: Advanced Orchestration via Kubernetes
+- **Objective:** Leveraging the industry-standard Kubernetes API for workload management.
+- **Key Tasks:** Configuration of Pods, Deployments, and NodePort Services to manage complex containerized ecosystems.
+- **Outcome:** Enterprise-grade orchestration with advanced scheduling and lifecycle management.
+- **Manual:** [Lab 12 Manual](./Lab/Experiment_12_Container_Orchestration_using_Kubernetes.md)
+
+---
+
+## Technical Specifications
+- **Operating System:** Windows 11 Enterprise / Ubuntu 22.04 LTS (WSL2)
+- **Container Engine:** Docker v24.0.7
+- **IaC Tool:** Ansible v2.10.8
+- **CI/CD Platform:** Jenkins LTS
+- **Security Analysis:** SonarQube Community Edition
+- **Orchestration:** Kubernetes v1.29.0 / Docker Swarm
+
+---
+
+## Design Principles
+- **Idempotency:** Automation ensures identical results across multiple executions.
+- **Declarative Logic:** Preference for Infrastructure as Code (IaC) over manual intervention.
+- **Security Hardening:** Implementation of least-privilege networking and secret encryption.
+- **Cloud-Native Scalability:** Architecture designed for seamless horizontal growth.
+
+---
+
+## Repository Organization
+- **[/Lab](./Lab):** Technical documentation and experimental procedures.
+- **[/Asset](./Asset):** Empirical evidence, diagrams, and terminal logs.
+- **[/Project_Assignment](./Project_Assignment):** Specialized network and security implementations.

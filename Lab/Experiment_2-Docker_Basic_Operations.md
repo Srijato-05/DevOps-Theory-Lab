@@ -1,9 +1,5 @@
 # Experiment 2: Docker Installation, Configuration, and Running Images
 
-**Date:** February 11, 2026  
-**Lab Type:** Containerization  
-**Difficulty Level:** Beginner
-
 ---
 
 ## Table of Contents
@@ -105,7 +101,4 @@ This lab demonstrated containerization using Docker, highlighting container mana
 ## Additional Resources
 
 - [Docker Official Documentation](https://docs.docker.com/)
-- [Docker Images Documentation](https://docs.docker.com/get-started/docker-concepts/building-images/)
-- [Docker CLI Reference](https://docs.docker.com/engine/reference/commandline/docker/)
 - [Docker Hub Registry](https://hub.docker.com/)
-- [Docker Getting Started Guide](https://docs.docker.com/get-started/)

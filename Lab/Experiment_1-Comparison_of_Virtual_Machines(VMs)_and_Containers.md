@@ -1,9 +1,5 @@
 # Experiment 1: Comparison of Virtual Machines (VMs) and Containers
 
-**Date:** February 10, 2026  
-**Lab Type:** Virtualization Theory  
-**Difficulty Level:** Beginner
-
 ---
 
 ## Table of Contents
@@ -99,6 +95,7 @@ vagrant init ubuntu/jammy64
 This command creates a `Vagrantfile` with default configurations for the Ubuntu image.
 
 ![Vagrant Init Configuration](../Asset/Lab_1/1-2.png)
+
 #### Step 5: Deploy the Virtual Machine
 
 Launch the virtual machine (this may take 5-10 minutes for the first download):
@@ -482,17 +479,3 @@ For most cloud-native and microservices-based applications, **Docker containeriz
 - [Docker Hub](https://hub.docker.com/)
 - [Kubernetes Official Site](https://kubernetes.io/)
 - [Cloud Native Computing Foundation](https://www.cncf.io/)
-
----
-
-## Lab Checklist
-
-- VirtualBox and Vagrant installed and verified
-- Ubuntu VM deployed and accessed via SSH
-- Nginx installed and running in VM
-- VM resource metrics captured
-- Docker installed in WSL Ubuntu
-- Nginx container deployed and tested
-- Container resource metrics captured
-- Comparison analysis completed
-- Use cases and recommendations documented
