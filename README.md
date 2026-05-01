@@ -39,8 +39,7 @@
     - [Exp 11: Docker Swarm](#experiment-11-basic-cluster-orchestration-with-docker-swarm)
     - [Exp 12: Kubernetes Orchestration](#experiment-12-advanced-orchestration-via-kubernetes)
 4. [Technical Specifications](#technical-specifications)
-5. [Design Principles](#design-principles)
-6. [Repository Organization](#repository-organization)
+5. [Repository Organization](#repository-organization)
 
 ---
 
@@ -151,14 +150,6 @@ This technical portfolio documents a comprehensive series of laboratory experime
 - **CI/CD Platform:** Jenkins LTS
 - **Security Analysis:** SonarQube Community Edition
 - **Orchestration:** Kubernetes v1.29.0 / Docker Swarm
-
----
-
-## Design Principles
-- **Idempotency:** Automation ensures identical results across multiple executions.
-- **Declarative Logic:** Preference for Infrastructure as Code (IaC) over manual intervention.
-- **Security Hardening:** Implementation of least-privilege networking and secret encryption.
-- **Cloud-Native Scalability:** Architecture designed for seamless horizontal growth.
 
 ---
 
