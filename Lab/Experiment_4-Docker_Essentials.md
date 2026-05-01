@@ -1,8 +1,10 @@
-# Lab Report 4: Docker Essentials (Dockerfile, Optimization, and Publishing)
+# Experiment 4: Docker Essentials
 
-**Date:** February 20, 2026
+**Date:** February 20, 2026  
+**Lab Type:** Containerization Essentials  
+**Difficulty Level:** Intermediate
 
-**Student:** Srijato Das
+---
 
 ## Objective
 

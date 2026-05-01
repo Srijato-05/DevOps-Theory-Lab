@@ -1,4 +1,10 @@
-# Experiment 9: Infrastructure Automation using Ansible (Windows/WSL Guide)
+# Experiment 9: Infrastructure Automation using Ansible
+
+**Date:** March 15, 2026  
+**Lab Type:** Infrastructure as Code  
+**Difficulty Level:** Intermediate
+
+---
 
 ## 1. Theory
 

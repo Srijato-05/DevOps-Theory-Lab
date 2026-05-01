@@ -1,4 +1,10 @@
-# Experiment 5: Docker - Volumes, Environment Variables, Monitoring & Networks
+# Experiment 5: Volumes, Monitoring, and Networks
+
+**Date:** February 27, 2026  
+**Lab Type:** Advanced Container Management  
+**Difficulty Level:** Intermediate
+
+---
 
 ## Part 1: Docker Volumes - Persistent Data Storage
 

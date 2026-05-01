@@ -1,5 +1,11 @@
 # Experiment 10: SonarQube — Static Code Analysis
 
+**Date:** March 22, 2026  
+**Lab Type:** Software Quality & Security  
+**Difficulty Level:** Intermediate
+
+---
+
 ## 1. Theory
 
 ### Problem Statement

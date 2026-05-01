@@ -1,4 +1,10 @@
-# Experiment 11: Orchestration using Docker Compose & Docker Swarm
+# Experiment 11: Orchestration using Docker Swarm
+
+**Date:** April 05, 2026  
+**Lab Type:** Container Orchestration  
+**Difficulty Level:** Intermediate
+
+---
 
 ## 1. Theory: Concept Continuation
 

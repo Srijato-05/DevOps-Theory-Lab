@@ -1,5 +1,11 @@
 # Experiment 12: Container Orchestration using Kubernetes
 
+**Date:** April 12, 2026  
+**Lab Type:** Advanced Orchestration  
+**Difficulty Level:** Advanced
+
+---
+
 ## 1. Objective
 To understand why Kubernetes is used, learn its core concepts, and implement deployment, scaling, and self-healing through a hands-on lab using `kubectl`.
 

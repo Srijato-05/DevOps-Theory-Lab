@@ -1,4 +1,10 @@
-# Experiment 6: Comparison of Docker Run and Docker Compose
+# Experiment 6: Docker Run vs. Docker Compose
+
+**Date:** March 05, 2026  
+**Lab Type:** Multi-Container Orchestration  
+**Difficulty Level:** Intermediate
+
+---
 
 ## PART A – THEORY
 

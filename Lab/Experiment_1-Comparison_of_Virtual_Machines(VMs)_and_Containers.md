@@ -1,6 +1,8 @@
 # Experiment 1: Comparison of Virtual Machines (VMs) and Containers
 
-**Date:** February 10, 2026
+**Date:** February 10, 2026  
+**Lab Type:** Virtualization Theory  
+**Difficulty Level:** Beginner
 
 ---
 

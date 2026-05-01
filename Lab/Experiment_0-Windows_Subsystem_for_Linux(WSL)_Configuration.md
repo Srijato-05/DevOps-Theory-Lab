@@ -1,12 +1,10 @@
 # Experiment 0: Windows Subsystem for Linux (WSL) Configuration
 
-> [!IMPORTANT]
-> A system restart is required after the installation command completes. Save all work before proceeding.
-
-![WSL and Git Installation](../Asset/Lab_0/0-1.png)
-
 **Date:** February 9, 2026  
-**Lab Type:** Infrastructure Setup
+**Lab Type:** Infrastructure Setup  
+**Difficulty Level:** Beginner
+
+---
 
 ---
 

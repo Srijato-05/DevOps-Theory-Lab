@@ -1,4 +1,10 @@
-# Experiment 7: CI/CD using Jenkins, GitHub and Docker Hub
+# Experiment 7: Jenkins, GitHub, and Docker Hub
+
+**Date:** March 12, 2026  
+**Lab Type:** Continuous Integration & Delivery  
+**Difficulty Level:** Intermediate
+
+---
 
 ## 1. Aim
 To design and implement a complete **CI/CD pipeline** using Jenkins, integrating source code from GitHub, and building & pushing Docker images to Docker Hub.
