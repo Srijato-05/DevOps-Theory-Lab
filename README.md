@@ -53,8 +53,8 @@ This technical portfolio documents a comprehensive series of laboratory experime
 
 | ID | Module Title | Primary Focus | Technical Stack | Documentation |
 |:---:|:---|:---|:---|:---:|
-| **0** | **WSL Configuration** | Environment Setup | WSL2, Ubuntu, Git | [View](./Lab/Experiment_0-Windows_Subsystem_for_Linux(WSL)_Configuration.md) |
-| **1** | **Virtualization Analysis**| VMs vs. Containers | Vagrant, VirtualBox | [View](./Lab/Experiment_1-Comparison_of_Virtual_Machines(VMs)_and_Containers.md) |
+| **0** | **WSL Configuration** | Environment Setup | WSL2, Ubuntu, Git | [View](./Lab/Experiment_0-Windows_Subsystem_for_Linux_Configuration.md) |
+| **1** | **Virtualization Analysis**| VMs vs. Containers | Vagrant, VirtualBox | [View](./Lab/Experiment_1-Comparison_of_Virtual_Machines_and_Containers.md) |
 | **2** | **Docker Primaries** | Image Lifecycle | Docker CLI, Nginx | [View](./Lab/Experiment_2-Docker_Basic_Operations.md) |
 | **3** | **Layered Architecture** | Image Optimization | Alpine, UnionFS | [View](./Lab/Experiment_3-Deploying_NGINX_Using_Different_Base_Images_and_Comparing_Image_Layers.md) |
 | **4** | **Docker Essentials** | Runtime Config | Env Vars, Mapping | [View](./Lab/Experiment_4-Docker_Essentials.md) |
@@ -74,13 +74,13 @@ This technical portfolio documents a comprehensive series of laboratory experime
 - **Objective:** Establishment of a high-performance, POSIX-compliant virtualization layer on Windows.
 - **Key Tasks:** Enabling Virtual Machine Platform, installing Ubuntu 22.04 LTS, and configuring Git for cross-platform version control.
 - **Outcome:** A unified development environment bridge between Windows and Linux kernels.
-- **Manual:** [Lab 0 Manual](./Lab/Experiment_0-Windows_Subsystem_for_Linux(WSL)_Configuration.md)
+- **Manual:** [Lab 0 Manual](./Lab/Experiment_0-Windows_Subsystem_for_Linux_Configuration.md)
 
 ### Experiment 1: Comparative Analysis of Virtualization Methodologies
 - **Objective:** Empirical study comparing Hypervisor-based virtualization (VMs) with OS-level containerization.
 - **Key Tasks:** Deploying Ubuntu via Vagrant/VirtualBox and comparing its boot-time/resource usage against Docker containers.
 - **Outcome:** Deep understanding of hardware abstraction vs. kernel sharing.
-- **Manual:** [Lab 1 Manual](./Lab/Experiment_1-Comparison_of_Virtual_Machines(VMs)_and_Containers.md)
+- **Manual:** [Lab 1 Manual](./Lab/Experiment_1-Comparison_of_Virtual_Machines_and_Containers.md)
 
 ### Experiment 2: Docker Fundamental Operations
 - **Objective:** Mastering the container lifecycle through the Docker CLI.
