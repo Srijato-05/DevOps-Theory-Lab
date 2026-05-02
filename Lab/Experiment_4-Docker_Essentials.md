@@ -128,6 +128,8 @@ CMD ["python", "app.py"]
 - Test app: `curl http://localhost:5000`
 
 ![curl output or browser view](../Asset/Lab_4/4-9.png)
+![Running Container Logs](../Asset/Lab_4/4-10.png)
+![Container Process Monitoring](../Asset/Lab_4/4-11.png)
 
 ---
 
@@ -163,6 +165,7 @@ Build and compare:
 - `docker build -f Dockerfile.multistage -t flask-multistage:latest .`
 
 ![multistage build output](../Asset/Lab_4/4-13.png)
+![Multistage Image Verification](../Asset/Lab_4/4-14.png)
 
 ---
 
@@ -179,6 +182,9 @@ Build and compare:
 3) Push images:
 - `docker push username/my-flask-app:1.0`
 - `docker push username/my-flask-app:multistage`
+
+![Docker Hub Push Verification](../Asset/Lab_4/4-16.png)
+![Docker Hub Repository View](../Asset/Lab_4/4-17.png)
 
 ---
 

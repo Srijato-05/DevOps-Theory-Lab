@@ -104,6 +104,7 @@ Kubernetes automatically replaces deleted pods to maintain the desired state.
 2. Watch Kubernetes recreate it: `kubectl get pods`
 
 ![Kubernetes Self-Healing](../Asset/Lab_12/4.png)
+![Kubernetes Pod Re-initialization](../Asset/Lab_12/5.png)
 
 ---
 

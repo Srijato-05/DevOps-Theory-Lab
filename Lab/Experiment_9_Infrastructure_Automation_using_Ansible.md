@@ -52,6 +52,7 @@ cp ~/.ssh/id_rsa.pub .
 cp ~/.ssh/id_rsa .
 ```
 ![SSH Key Generation](../Asset/Lab_9/2-1.png)
+![SSH Key Distribution](../Asset/Lab_9/2-2.png)
 
 ### Step 2: Create Dockerfile for SSH Server
 ```dockerfile
@@ -73,6 +74,8 @@ CMD ["/usr/sbin/sshd", "-D"]
 docker build -t ubuntu-server .
 docker run -d -p 2222:22 --name ssh-test-server ubuntu-server
 ```
+
+![Docker SSH Server Running](../Asset/Lab_9/3.png)
 
 ---
 
@@ -102,6 +105,7 @@ done
 ```
 **Execute**: `ansible-playbook -i inventory.ini playbook.yml`
 ![Running Ansible Playbook](../Asset/Lab_9/4-1.png)
+![Ansible Playbook Verification](../Asset/Lab_9/4-2.png)
 
 ---
 

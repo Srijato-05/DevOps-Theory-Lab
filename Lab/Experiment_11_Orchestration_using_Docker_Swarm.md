@@ -37,6 +37,7 @@ docker swarm init
 docker node ls
 ```
 ![Swarm Initialization](../Asset/Lab_11/1.png)
+![Swarm Node Status](../Asset/Lab_11/3.png)
 
 ### Task 2: Deploy as a Stack
 Deploy a group of services using a Compose file:
@@ -61,6 +62,7 @@ docker service ls                # Notice REPLICAS 3/3
 2. Swarm immediately starts a new one to maintain the desired state.
 
 ![Self-Healing Test](../Asset/Lab_11/5.png)
+![Swarm Service Convergence](../Asset/Lab_11/6.png)
 
 ---
 

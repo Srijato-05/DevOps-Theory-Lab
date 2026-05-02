@@ -139,6 +139,8 @@ lsb_release -a
 sudo apt update && sudo apt upgrade -y
 ```
 
+![WSL Verification and Update](../Asset/Lab_0/0-6.png)
+
 ---
 
 ## Troubleshooting

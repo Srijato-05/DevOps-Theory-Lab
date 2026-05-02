@@ -42,6 +42,7 @@ docker run -d -p 8080:80 nginx
 ```
 
 ![Run Container with Port Mapping](../Asset/Lab_2/2-2.png)
+![Container Execution Details](../Asset/Lab_2/2-3.png)
 
 ---
 

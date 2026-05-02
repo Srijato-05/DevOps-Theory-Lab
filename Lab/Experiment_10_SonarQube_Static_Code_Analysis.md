@@ -59,6 +59,12 @@ services:
 ```
 **Start**: `docker-compose up -d`
 ![SonarQube Server Initialization](../Asset/Lab_10/1.png)
+![SonarQube Database Ready](../Asset/Lab_10/1-2.png)
+
+### Step 2: Generate Token
+Access the SonarQube UI to generate an analysis token.
+![SonarQube Token Generation](../Asset/Lab_10/2.png)
+![SonarQube Project Configuration](../Asset/Lab_10/2-2.png)
 
 ### Step 2: Run the Scanner
 Run analysis using the Maven plugin:

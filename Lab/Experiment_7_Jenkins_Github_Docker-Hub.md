@@ -52,6 +52,8 @@ my-app/
 └── Jenkinsfile
 ```
 
+![GitHub Repository Structure](../Asset/Lab_7/P1.png)
+
 ### 5.3 Jenkinsfile (Pipeline Definition)
 ```groovy
 pipeline {

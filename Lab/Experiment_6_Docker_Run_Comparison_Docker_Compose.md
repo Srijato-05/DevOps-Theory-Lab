@@ -103,6 +103,8 @@ volumes:
   mysql_data:
 ```
 ![WordPress via Docker Compose](../Asset/Lab_6/6A/T2-P2-2.png)
+![Database Initialization](../Asset/Lab_6/6A/T2-P1.png)
+![WordPress Service Configuration](../Asset/Lab_6/6A/T2-P2-3.png)
 
 ---
 
@@ -119,6 +121,8 @@ EXPOSE 3000
 CMD ["node", "app.js"]
 ```
 
+![Dockerfile Creation](../Asset/Lab_6/6A/T3-P1.png)
+
 **Step 2: Create docker-compose.yml**
 ```yaml
 version: '3.8'
@@ -129,7 +133,11 @@ services:
     ports:
       - "3000:3000"
 ```
+![Compose Build Process](../Asset/Lab_6/6A/T3-P2-1.png)
+![Compose Image Verification](../Asset/Lab_6/6A/T3-P2-2.png)
 ![Custom Node App Build 1](../Asset/Lab_6/6A/T5-1.png)
+![Node App Service Test](../Asset/Lab_6/6A/T5-2.png)
+![Container Networking Verification](../Asset/Lab_6/6A/T4.png)
 
 ---
 
@@ -141,10 +149,12 @@ services:
 ```bash
 docker swarm init
 ```
+![Swarm Initialization](../Asset/Lab_6/6B/1.png)
 **Step 2: Deploy Stack**
 ```bash
 docker stack deploy -c docker-compose.yml wpstack
 ```
+![Stack Deployment](../Asset/Lab_6/6B/2.png)
 **Step 3: Scale Service**
 ```bash
 docker service scale wpstack_wordpress=3

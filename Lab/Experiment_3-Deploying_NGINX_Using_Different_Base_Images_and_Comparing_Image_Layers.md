@@ -222,6 +222,7 @@ docker ps | grep nginx-alpine
 ```
 
 ![Alpine NGINX Image verification](../Asset/Lab_3/3-1.png)
+![Alpine Container Status](../Asset/Lab_3/3-6.png)
 
 ---
 
