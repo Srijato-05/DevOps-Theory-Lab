@@ -35,12 +35,14 @@ docker swarm init
 ```bash
 docker node ls
 ```
+![Swarm Initialization](../Asset/Lab_11/1.png)
 
 ### Task 2: Deploy as a Stack
 Deploy a group of services using a Compose file:
 ```bash
 docker stack deploy -c docker-compose.yml wpstack
 ```
+![Stack Deployment](../Asset/Lab_11/2.png)
 
 ### Task 3: Scale the Application
 Scale WordPress to 3 replicas:
@@ -51,10 +53,13 @@ docker service scale wpstack_wordpress=3
 ```bash
 docker service ls                # Notice REPLICAS 3/3
 ```
+![Scaling Service](../Asset/Lab_11/4.png)
 
 ### Task 4: Test Self-Healing
 1. Kill a container: `docker kill <container-id>`.
 2. Swarm immediately starts a new one to maintain the desired state.
+
+![Self-Healing Test](../Asset/Lab_11/5.png)
 
 ---
 

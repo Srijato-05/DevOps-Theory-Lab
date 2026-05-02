@@ -67,6 +67,8 @@ spec:
 ```
 **Apply**: `kubectl apply -f wordpress-deployment.yaml`
 
+![Kubernetes Deployment](../Asset/Lab_12/1.png)
+
 ### Task 2: Expose the Deployment
 **wordpress-service.yaml**:
 ```yaml
@@ -85,10 +87,21 @@ spec:
 ```
 **Apply**: `kubectl apply -f wordpress-service.yaml`
 
+![Kubernetes Service](../Asset/Lab_12/2.png)
+
 ### Task 3: Scale the Deployment
-```bash
 kubectl scale deployment wordpress --replicas=4
 ```
+
+![Kubernetes Scaling](../Asset/Lab_12/3.png)
+
+### Task 4: Test Self-Healing
+Kubernetes automatically replaces deleted pods to maintain the desired state.
+
+1. Delete a pod: `kubectl delete pod <pod-name>`
+2. Watch Kubernetes recreate it: `kubectl get pods`
+
+![Kubernetes Self-Healing](../Asset/Lab_12/4.png)
 
 ---
 
