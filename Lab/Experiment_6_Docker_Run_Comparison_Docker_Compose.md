@@ -36,6 +36,16 @@ docker compose up -d
 ```
 Compose is **declarative**, meaning you define the desired state of the application.
 
+### 3. Comparison: Docker Run vs. Docker Compose
+
+| Feature | Docker Run | Docker Compose |
+| :--- | :--- | :--- |
+| **Approach** | Imperative (Step-by-step) | Declarative (Desired state) |
+| **Configuration** | Command-line flags | YAML file |
+| **Complexity** | Simple for single containers | Efficient for multi-service apps |
+| **Management** | Manual tracking | Version-controlled configuration |
+| **Service Links** | Manual network links | Automatic internal DNS |
+
 ---
 
 ## PART B – PRACTICAL TASK
@@ -146,7 +156,7 @@ docker service scale wpstack_wordpress=3
 | :--- | :--- | :--- |
 | **Scope** | Single host | Multi-node cluster |
 | **Scaling** | Manual | Built-in |
-| **Load Balancing**| No | Yes (Internal) |
+| **Load Balancing** | No | Yes (Internal) |
 | **Self-healing** | No | Yes |
 
 ---
