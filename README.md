@@ -157,3 +157,4 @@ This technical portfolio documents a comprehensive series of laboratory experime
 - **[/Lab](./Lab):** Technical documentation and experimental procedures.
 - **[/Asset](./Asset):** Empirical evidence, diagrams, and terminal logs.
 - **[/Project_Assignment](./Project_Assignment):** Specialized network and security implementations.
+- **[PDF Generation Guide](./Lab/Appendix_PDF_Generation_Guide.md):** Manual for converting the portfolio to a submission-ready PDF.
