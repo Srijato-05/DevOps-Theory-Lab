@@ -12,6 +12,7 @@
 6. [Part D — Node.js App](#part-d---nodejs-app)
 7. [Troubleshooting & Best Practices](#troubleshooting--best-practices)
 8. [Conclusion](#conclusion)
+9. [Additional Resources](#additional-resources)
 
 ---
 
@@ -247,5 +248,14 @@ Build and run:
 ## Conclusion
 
 This lab demonstrates a full container lifecycle: local app creation, Dockerfile authoring, optimization with .dockerignore and multi-stage builds, image inspection, tagging, and publishing to Docker Hub.
+
+---
+
+## Additional Resources
+
+- [Dockerfile Reference](https://docs.docker.com/engine/reference/builder/)
+- [Best Practices for Writing Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
+- [Multi-stage Build Documentation](https://docs.docker.com/build/building/multi-stage/)
+- [Docker Hub Official Repositories](https://hub.docker.com/search?type=image&image_filter=official)
 
 ---

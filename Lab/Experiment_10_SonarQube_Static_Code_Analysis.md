@@ -9,6 +9,7 @@
 3. [Hands-on Lab](#3-hands-on-lab)
 4. [Integration & Best Practices](#4-integration--best-practices)
 5. [Conclusion](#best-practices)
+6. [Additional Resources](#additional-resources)
 
 ---
 
@@ -90,5 +91,14 @@ stage('SonarQube Analysis') {
 - **Enforce Quality Gates**: Block deployments if rules fail.
 - **Zero Technical Debt**: Fix issues immediately.
 - **Security**: Use secret managers for tokens.
+
+---
+
+## Additional Resources
+
+- [SonarQube Documentation](https://docs.sonarqube.org/)
+- [SonarScanner CLI Guide](https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/)
+- [OWASP Static Code Analysis Guide](https://owasp.org/www-community/controls/Static_Code_Analysis)
+- [Clean Code Principles](https://www.sonarsource.com/resources/clean-code/)
 
 ---

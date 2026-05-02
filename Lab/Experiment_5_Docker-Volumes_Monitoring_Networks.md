@@ -11,6 +11,7 @@
 5. [Part 5: Complete Real-World Example](#part-5-complete-real-world-example)
 6. [Quick Reference Cheatsheet](#quick-reference-cheatsheet)
 7. [Conclusion](#key-takeaways)
+8. [Additional Resources](#additional-resources)
 
 ---
 
@@ -182,3 +183,12 @@ docker run -d --name flask-app --network myapp-network -p 5000:5000 -v $(pwd)/ap
 - **Environment Variables** configure containers dynamically.
 - **Monitoring** commands (stats, logs, top) help debug and optimize.
 - **Networks** enable secure and isolated container communication.
+
+---
+
+## Additional Resources
+
+- [Manage data in Docker](https://docs.docker.com/storage/)
+- [Docker Networking Overview](https://docs.docker.com/network/)
+- [Docker Statistics Reference](https://docs.docker.com/engine/reference/commandline/stats/)
+- [PostgreSQL Docker Official Image](https://hub.docker.com/_/postgres)

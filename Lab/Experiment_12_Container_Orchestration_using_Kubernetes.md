@@ -7,9 +7,10 @@
 1. [Objective](#1-objective)
 2. [Theory: Why Kubernetes?](#2-theory-why-kubernetes)
 3. [Core Concepts Mapping](#core-concepts-mapping)
-4. [Hands-On Lab](#3-hands-on-lab-task-1---5)
+4. [Hands-On Lab](#hands-on-lab)
 5. [Summary of Commands](#5-summary-of-commands-cheat-sheet)
 6. [Conclusion](#6-conclusion)
+7. [Additional Resources](#additional-resources)
 
 ---
 
@@ -90,6 +91,7 @@ spec:
 ![Kubernetes Service](../Asset/Lab_12/2.png)
 
 ### Task 3: Scale the Deployment
+```bash
 kubectl scale deployment wordpress --replicas=4
 ```
 
@@ -118,3 +120,12 @@ Kubernetes automatically replaces deleted pods to maintain the desired state.
 
 ## 6. Conclusion
 This experiment demonstrated the core functionality of Kubernetes: declarative deployments, stable service exposition, easy scaling, and automatic self-healing. Kubernetes provides the robustness required for enterprise-scale orchestration.
+
+---
+
+## Additional Resources
+
+- [Kubernetes Documentation](https://kubernetes.io/docs/home/)
+- [Kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+- [Interactive Kubernetes Tutorials](https://kubernetes.io/docs/tutorials/)
+- [Kubernetes Architecture Overview](https://kubernetes.io/docs/concepts/architecture/)

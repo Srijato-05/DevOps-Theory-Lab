@@ -10,6 +10,7 @@
 4. [Multi-Container Ansible Exercise](#4-multi-container-ansible-exercise)
 5. [The Need for Ansible](#5-the-need-for-ansible-in-server-management)
 6. [Conclusion](#conclusion)
+7. [Additional Resources](#additional-resources)
 
 ---
 
@@ -114,3 +115,12 @@ done
 
 ## Conclusion
 This experiment demonstrated the power of Ansible for infrastructure automation, covering agentless configuration, inventory management, and declarative YAML playbooks.
+
+---
+
+## Additional Resources
+
+- [Ansible Documentation](https://docs.ansible.com/)
+- [Ansible Galaxy](https://galaxy.ansible.com/)
+- [Ansible Playbook Guide](https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html)
+- [SSH Key Management Best Practices](https://www.ssh.com/academy/ssh/key/management)

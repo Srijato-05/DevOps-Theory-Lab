@@ -7,7 +7,8 @@
 1. [Theory: Concept Continuation](#1-theory-concept-continuation)
 2. [Practical Tasks](#2-practical-tasks-extension-of-experiment-6)
 3. [Analysis: Compose vs Swarm](#3-analysis-compose-vs-swarm)
-4. [Conclusion](#4-important-observations)
+4. [Important Observations](#4-important-observations)
+5. [Additional Resources](#additional-resources)
 
 ---
 
@@ -81,3 +82,10 @@ docker service ls                # Notice REPLICAS 3/3
 - **IaC**: Swarm maintains the **desired state** automatically.
 
 ---
+
+## Additional Resources
+
+- [Docker Swarm Mode Overview](https://docs.docker.com/engine/swarm/)
+- [Docker Stack Deploy Guide](https://docs.docker.com/engine/reference/commandline/stack_deploy/)
+- [High Availability in Docker Swarm](https://docs.docker.com/engine/swarm/raft/)
+- [Service Discovery and Load Balancing](https://docs.docker.com/engine/swarm/networking/)

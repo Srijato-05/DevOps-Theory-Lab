@@ -13,6 +13,7 @@
 7. [Part D: GitHub Webhook Integration](#part-d-github-webhook-integration)
 8. [Part E: Understanding Jenkins Pipeline Syntax](#part-e-understanding-jenkins-pipeline-syntax)
 9. [Observations & Results](#observations--results)
+10. [Additional Resources](#additional-resources)
 
 ---
 
@@ -131,3 +132,12 @@ volumes:
 - **Security**: Credentials are managed centrally in Jenkins and never exposed in the source code.
 
 ![Jenkins Pipeline Success](../Asset/Lab_7/P2.png)
+
+---
+
+## Additional Resources
+
+- [Jenkins Documentation](https://www.jenkins.io/doc/)
+- [Using a Jenkinsfile](https://www.jenkins.io/doc/book/pipeline/jenkinsfile/)
+- [Pipeline Syntax Guide](https://www.jenkins.io/doc/book/pipeline/syntax/)
+- [GitHub Webhooks Guide](https://docs.github.com/en/developers/webhooks-and-events/webhooks/about-webhooks)

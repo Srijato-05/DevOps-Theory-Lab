@@ -10,6 +10,7 @@
 4. [PART D – USING DOCKERFILE INSTEAD OF STANDARD IMAGE](#part-d-using-dockerfile-instead-of-standard-image)
 5. [MULTI-CONTAINER APPLICATION INVOLVING DOCKER SWARM](#experiment-6-b-multi-container-application-involving-docker-swarm)
 6. [Conclusion](#key-learning-outcomes)
+7. [Additional Resources](#additional-resources)
 
 ---
 
@@ -157,3 +158,12 @@ docker service scale wpstack_wordpress=3
 - Multi-container applications require orchestration for management.
 - Internal networking and volumes are critical for persistence and communication.
 - Declarative configuration (YAML) is preferred for complex deployments.
+
+---
+
+## Additional Resources
+
+- [Docker Compose Overview](https://docs.docker.com/compose/)
+- [Compose File Specification](https://docs.docker.com/compose/compose-file/)
+- [Docker Swarm Mode Introduction](https://docs.docker.com/engine/swarm/)
+- [WordPress Docker Official Image](https://hub.docker.com/_/wordpress)
